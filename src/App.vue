@@ -6,6 +6,6 @@
 
 <template>
     <main>
-        <h1>Squircle Land!</h1>
+        <h1>Let's Squircle!</h1>
     </main>
 </template>
