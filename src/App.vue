@@ -6,18 +6,6 @@
 
 <template>
     <main>
-        <router-view />
+        <p>Squirle Land!</p>
     </main>
 </template>
-
-<style scoped>
-    main {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem;
-        font-family: 'Avenir', system-ui;
-    }
-</style>
