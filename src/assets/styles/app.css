@@ -1,3 +1,5 @@
+/* Reset / Normalize */
+
 @import 'normalize.css';
 
 html {
@@ -65,4 +67,64 @@ video {
 table {
     table-layout: fixed;
     width: 100%;
+}
+
+/* Variables */
+
+:root {
+    /* Font family */
+    --font-family: 'Nunito', system-ui;
+
+    /* Type scale */
+    --font-size-0: 0.75rem;
+    --font-size-1: 0.875rem;
+    --font-size-2: 1rem;
+    --font-size-3: 1.125rem;
+    --font-size-4: 1.25rem;
+    --font-size-5: 1.5rem;
+    --font-size-6: 1.875rem;
+    --font-size-7: 2.25rem;
+    --font-size-8: 3rem;
+    --font-size-9: 3.75rem;
+    --font-size-10: 4.5rem;
+
+    /* Spacing */
+    --spacing-0: 0.25rem;
+    --spacing-1: 0.5rem;
+    --spacing-3: 0.75rem;
+    --spacing-4: 1rem;
+    --spacing-5: 1.5rem;
+    --spacing-6: 2rem;
+    --spacing-7: 3rem;
+    --spacing-8: 4rem;
+    --spacing-9: 6rem;
+    --spacing-10: 8rem;
+    --spacing-11: 12rem;
+    --spacing-12: 16rem;
+    --spacing-13: 24rem;
+    --spacing-14: 32rem;
+    --spacing-15: 40rem;
+    --spacing-16: 48rem;
+
+    /* Colors - Grey */
+    --grey-900: #1f2933;
+    --grey-800: #323f4b;
+    --grey-700: #3e4c59;
+    --grey-600: #52606d;
+    --grey-500: #616e7c;
+    --grey-400: #7b8794;
+    --grey-300: #9aa5b1;
+    --grey-200: #cbd2d9;
+    --grey-100: #e4e7eb;
+    --grey-000: #f5f7fa;
+}
+
+/* Global Styles */
+
+body {
+    font-family: var(--font-family);
+    line-height: 1;
+    color: var(--grey-900);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smothing: grayscale;
 }
