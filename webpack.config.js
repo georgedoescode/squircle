@@ -78,7 +78,7 @@ module.exports = (env, argv) => {
                     ],
                 },
                 {
-                    test: /\.(png|jpe?g|gif|svg)$/i,
+                    test: /\.(png|jpe?g|gif)$/i,
                     use: [
                         {
                             loader: 'file-loader',
@@ -88,6 +88,10 @@ module.exports = (env, argv) => {
                             },
                         },
                     ],
+                },
+                {
+                    test: /\.svg$/,
+                    use: ['babel-loader', 'vue-svg-loader'],
                 },
             ],
         },

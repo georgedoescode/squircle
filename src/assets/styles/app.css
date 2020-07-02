@@ -91,20 +91,20 @@ table {
     /* Spacing */
     --spacing-0: 0.25rem;
     --spacing-1: 0.5rem;
-    --spacing-3: 0.75rem;
-    --spacing-4: 1rem;
-    --spacing-5: 1.5rem;
-    --spacing-6: 2rem;
-    --spacing-7: 3rem;
-    --spacing-8: 4rem;
-    --spacing-9: 6rem;
-    --spacing-10: 8rem;
-    --spacing-11: 12rem;
-    --spacing-12: 16rem;
-    --spacing-13: 24rem;
-    --spacing-14: 32rem;
-    --spacing-15: 40rem;
-    --spacing-16: 48rem;
+    --spacing-2: 0.75rem;
+    --spacing-3: 1rem;
+    --spacing-4: 1.5rem;
+    --spacing-5: 2rem;
+    --spacing-6: 3rem;
+    --spacing-7: 4rem;
+    --spacing-8: 6rem;
+    --spacing-9: 8rem;
+    --spacing-10: 12rem;
+    --spacing-11: 16rem;
+    --spacing-12: 24rem;
+    --spacing-13: 32rem;
+    --spacing-14: 40rem;
+    --spacing-15: 48rem;
 
     /* Colors - Grey */
     --grey-900: #1f2933;
@@ -127,4 +127,5 @@ body {
     color: var(--grey-900);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smothing: grayscale;
+    background: var(--grey-000);
 }

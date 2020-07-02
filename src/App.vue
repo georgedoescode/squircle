@@ -1,11 +1,14 @@
 <script>
+    import TheHeader from './components/TheHeader.vue';
+
     export default {
         name: 'App',
+        components: {
+            TheHeader,
+        },
     };
 </script>
 
 <template>
-    <main>
-        <h1>Let's Squircle!</h1>
-    </main>
+    <TheHeader />
 </template>
