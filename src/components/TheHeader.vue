@@ -23,7 +23,8 @@
         grid-template-columns: 1fr max-content 1fr;
         grid-template-rows: auto;
         align-items: center;
-        padding: var(--spacing-4);
+        padding: var(--spacing-5);
+        margin-bottom: var(--spacing-7);
     }
 
     .header__logo {

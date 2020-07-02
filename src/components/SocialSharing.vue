@@ -48,7 +48,7 @@
         display: block;
         width: var(--spacing-4);
         height: var(--spacing-4);
-        margin-left: var(--spacing-4);
+        margin-left: var(--spacing-5);
         cursor: pointer;
         transition: transform 125ms ease-in-out;
     }
