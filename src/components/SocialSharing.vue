@@ -41,10 +41,7 @@
 
 <style scoped>
     .social-sharing {
-        width: 100%;
-        height: 100%;
         display: flex;
-        align-items: center;
     }
 
     .social-sharing__icon {
@@ -60,11 +57,15 @@
         width: 100%;
         height: 100%;
         fill: var(--grey-900);
-        transition: fill 125ms ease-in-out;
+        transition: fill 125ms ease-in-out, transform 125ms ease-in-out;
     }
 
     .social-sharing__icon:hover svg {
-        fill: var(--grey-600);
+        transform: scale(1.125);
+    }
+
+    .social-sharing__icon:active svg {
+        fill: var(--grey-500);
     }
 
     .social-sharing__icon:active {

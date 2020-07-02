@@ -128,4 +128,5 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smothing: grayscale;
     background: var(--grey-000);
+    overflow-x: hidden;
 }
