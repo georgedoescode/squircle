@@ -30,6 +30,9 @@ export default {
 }
 
 .generator-export-controls__btn {
+    align-self: flex-end;
+    width: var(--spacing-4);
+    height: var(--spacing-4);
     margin-left: var(--spacing-5);
     padding: 0;
     border: 0;
@@ -40,6 +43,8 @@ export default {
 }
 
 .generator-export-controls__btn svg {
+    width: 100%;
+    height: 100%;
     stroke: var(--grey-900);
 }
 

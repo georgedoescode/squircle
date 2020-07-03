@@ -6,7 +6,15 @@ export default {
 
 <template>
     <div class="generator-preview">
-        <svg></svg>
+        <svg>
+            <rect
+                x="25%"
+                y="25%"
+                width="50%"
+                height="50%"
+                fill="#1f2933"
+            ></rect>
+        </svg>
     </div>
 </template>
 
@@ -14,6 +22,8 @@ export default {
 .generator-preview {
     position: relative;
     width: 100%;
+    border: 1px dashed var(--grey-100);
+    border-radius: 16px;
 }
 
 .generator-preview::before {
@@ -28,6 +38,5 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--grey-000);
 }
 </style>

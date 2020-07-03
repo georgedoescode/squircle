@@ -21,7 +21,10 @@ export default {
             </div>
             <div class="generator__control-section">
                 <GeneratorControls />
-                <GeneratorExportOptions />
+                <div class="generator__control-section-footer">
+                    <button class="generator-reset-btn">Reset</button>
+                    <GeneratorExportOptions />
+                </div>
             </div>
         </div>
     </div>
@@ -29,29 +32,42 @@ export default {
 
 <style scoped>
 .generator-wrapper {
-    padding: 0 var(--spacing-4);
+    max-width: var(--spacing-15);
+    margin: 0 auto;
 }
 
 .generator {
     display: flex;
-    max-width: var(--spacing-15);
     margin: 0 auto;
-    padding: var(--spacing-4);
+    padding: var(--spacing-5);
     background: #fff;
     border-radius: 16px;
 }
 
 .generator__preview-section {
     position: relative;
-    width: 50%;
+    width: 45%;
     flex-shrink: 0;
-    margin-right: var(--spacing-4);
+    margin-right: var(--spacing-5);
 }
 
 .generator__control-section {
-    display: grid;
-    grid-template-rows: 1fr max-content;
     flex-grow: 1;
     min-height: 100%;
+    padding: var(--spacing-2);
+}
+
+.generator__control-section-footer {
+    display: flex;
+    height: var(--spacing-5);
+    margin-top: var(--spacing-5);
+}
+
+.generator-reset-btn {
+    align-self: flex-end;
+    padding: 0;
+    font-size: var(--font-size-1);
+    border: 0;
+    cursor: pointer;
 }
 </style>

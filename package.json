@@ -48,6 +48,7 @@
         "normalize.css": "^8.0.1",
         "vue": "^2.6.11",
         "vue-social-sharing": "^3.0.0-beta.11",
+        "vue-swatches": "^2.1.0",
         "vuex": "^3.5.1"
     }
 }

@@ -17,5 +17,7 @@ export default {
 <style scoped>
 input {
     min-width: 0;
+    max-width: 100%;
+    cursor: pointer;
 }
 </style>
