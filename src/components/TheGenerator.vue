@@ -1,19 +1,34 @@
 <script>
+    import GeneratorPreview from './GeneratorPreview.vue';
+    import GeneratorExportControls from './GeneratorExportConrols.vue';
+
     export default {
         name: 'TheGenerator',
+        components: {
+            GeneratorPreview,
+            GeneratorExportControls,
+        },
     };
 </script>
 
 <template>
-    <div class="generator">
-        <div class="generator__preview">
-            <svg></svg>
+    <div class="generator-wrapper">
+        <div class="generator">
+            <div class="generator__preview-section">
+                <GeneratorPreview />
+            </div>
+            <div class="generator__control-section">
+                <div></div>
+                <GeneratorExportControls />
+            </div>
         </div>
-        <div class="generator__control-panel"></div>
     </div>
 </template>
 
 <style scoped>
+    .generator-wrapper {
+        padding: 0 var(--spacing-4);
+    }
     .generator {
         display: flex;
         max-width: var(--spacing-15);
@@ -23,30 +38,19 @@
         border-radius: 16px;
     }
 
-    .generator__preview {
+    .generator__preview-section {
         position: relative;
         width: 50%;
         flex-shrink: 0;
         margin-right: var(--spacing-4);
     }
 
-    .generator__preview::before {
-        content: '';
-        display: block;
-        padding-bottom: 100%;
-    }
-
-    .generator__preview svg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: var(--grey-000);
-    }
-
-    .generator__control-panel {
+    .generator__control-section {
+        display: grid;
+        grid-template-rows: 1fr max-content;
         flex-grow: 1;
         min-height: 100%;
+
+        /* background: red; */
     }
 </style>
