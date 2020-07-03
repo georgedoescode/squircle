@@ -37,7 +37,8 @@ export default {
 }
 
 .generator {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     margin: 0 auto;
     padding: var(--spacing-5);
     background: #fff;
@@ -46,7 +47,6 @@ export default {
 
 .generator__preview-section {
     position: relative;
-    width: 45%;
     flex-shrink: 0;
     margin-right: var(--spacing-5);
 }
