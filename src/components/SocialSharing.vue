@@ -1,22 +1,22 @@
 <script>
-    import RedditLogo from '@/assets/img/social-icons/reddit-alien.svg';
-    import TwitterLogo from '@/assets/img/social-icons/twitter.svg';
+import RedditLogo from '@/assets/img/social-icons/reddit-alien.svg';
+import TwitterLogo from '@/assets/img/social-icons/twitter.svg';
 
-    export default {
-        name: 'SocialSharing',
-        components: {
-            RedditLogo,
-            TwitterLogo,
-        },
-        data() {
-            return {
-                sharingOptions: {
-                    url: 'https://www.squircley.app',
-                    title: 'Squircley | Squircle Maker',
-                },
-            };
-        },
-    };
+export default {
+    name: 'SocialSharing',
+    components: {
+        RedditLogo,
+        TwitterLogo,
+    },
+    data() {
+        return {
+            sharingOptions: {
+                url: 'https://www.squircley.app',
+                title: 'Squircley | Squircle Maker',
+            },
+        };
+    },
+};
 </script>
 
 <template>
@@ -40,35 +40,35 @@
 </template>
 
 <style scoped>
-    .social-sharing {
-        display: flex;
-    }
+.social-sharing {
+    display: flex;
+}
 
-    .social-sharing__icon {
-        display: block;
-        width: var(--spacing-4);
-        height: var(--spacing-4);
-        margin-left: var(--spacing-5);
-        cursor: pointer;
-        transition: transform 125ms ease-in-out;
-    }
+.social-sharing__icon {
+    display: block;
+    width: var(--spacing-4);
+    height: var(--spacing-4);
+    margin-left: var(--spacing-5);
+    cursor: pointer;
+    transition: transform 125ms ease-in-out;
+}
 
-    .social-sharing__icon svg {
-        width: 100%;
-        height: 100%;
-        fill: var(--grey-900);
-        transition: fill 125ms ease-in-out, transform 125ms ease-in-out;
-    }
+.social-sharing__icon svg {
+    width: 100%;
+    height: 100%;
+    fill: var(--grey-900);
+    transition: fill 125ms ease-in-out, transform 125ms ease-in-out;
+}
 
-    .social-sharing__icon:hover svg {
-        transform: scale(1.125);
-    }
+.social-sharing__icon:hover svg {
+    transform: scale(1.125);
+}
 
-    .social-sharing__icon:active svg {
-        fill: var(--grey-500);
-    }
+.social-sharing__icon:active svg {
+    fill: var(--grey-500);
+}
 
-    .social-sharing__icon:active {
-        transform: scale(0.875);
-    }
+.social-sharing__icon:active {
+    transform: scale(0.875);
+}
 </style>

@@ -3,5 +3,5 @@
     "semi": true,
     "singleQuote": true,
     "trailingComma": "es5",
-    "vueIndentScriptAndStyle": true
+    "vueIndentScriptAndStyle": false
 }
