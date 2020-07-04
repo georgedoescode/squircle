@@ -27,13 +27,16 @@ export default {
 .color-swatch {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
 }
+
 .color-swatch__color {
-    width: var(--spacing-4);
+    width: calc(20% - 0.5rem);
     height: var(--spacing-4);
-    border-radius: 50%;
-    align-self: center;
+    border-radius: 8px;
     cursor: pointer;
+    justify-self: center;
+    flex-shrink: 0;
 }
 </style>

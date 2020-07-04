@@ -1,24 +1,14 @@
 <script>
-import CodeIcon from '@/assets/img/code.svg';
-import DownloadIcon from '@/assets/img/download.svg';
-
 export default {
     name: 'GeneratorExportOptions',
-    components: {
-        CodeIcon,
-        DownloadIcon,
-    },
+    components: {},
 };
 </script>
 
 <template>
     <div class="generator-export-controls">
-        <button class="generator-export-controls__btn">
-            <DownloadIcon />
-        </button>
-        <button class="generator-export-controls__btn">
-            <CodeIcon />
-        </button>
+        <button class="generator-export-controls__btn"></button>
+        <button class="generator-export-controls__btn"></button>
     </div>
 </template>
 
@@ -31,20 +21,24 @@ export default {
 
 .generator-export-controls__btn {
     align-self: flex-end;
-    width: var(--spacing-4);
-    height: var(--spacing-4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--spacing-6);
+    height: var(--spacing-6);
     margin-left: var(--spacing-5);
     padding: 0;
-    border: 0;
     border-radius: 50%;
     outline: none;
     cursor: pointer;
+    background: #fff;
+    border: 1px solid var(--grey-100);
     transition: stroke 125ms ease-in-out, transform 125ms ease-in-out;
 }
 
 .generator-export-controls__btn svg {
-    width: 100%;
-    height: 100%;
+    width: 24px;
+    height: 24px;
     stroke: var(--grey-900);
 }
 
