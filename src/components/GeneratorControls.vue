@@ -15,8 +15,8 @@ export default {
 </script>
 
 <template>
-    <div>
-        <div class="generator-controls">
+    <div class="generator-controls">
+        <div class="generator-controls__inputs">
             <label for="scaleX" class="generator-controls__label">
                 Scale X
             </label>
@@ -49,10 +49,17 @@ export default {
 
 <style scoped>
 .generator-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.generator-controls__inputs {
     display: grid;
     grid-template-columns: max-content 1fr;
     grid-auto-rows: minmax(var(--spacing-5), max-content);
     grid-row-gap: var(--spacing-5);
+    justify-content: center;
     width: 100%;
 }
 

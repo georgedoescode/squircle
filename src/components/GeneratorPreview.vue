@@ -6,7 +6,7 @@ export default {
 
 <template>
     <div class="generator-preview">
-        <svg width="320" height="320" viewbox="0 0 320 320">
+        <svg>
             <rect
                 x="25%"
                 y="25%"

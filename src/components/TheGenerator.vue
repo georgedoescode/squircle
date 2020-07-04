@@ -16,13 +16,9 @@ export default {
 <template>
     <div class="generator-wrapper">
         <div class="generator">
-            <div class="generator__preview-section">
-                <GeneratorPreview />
-            </div>
-            <div class="generator__control-section">
-                <GeneratorControls />
-                <GeneratorExportOptions class="generator__export-opts" />
-            </div>
+            <GeneratorPreview />
+            <GeneratorControls />
+            <GeneratorExportOptions class="generator__export-opts" />
         </div>
     </div>
 </template>
