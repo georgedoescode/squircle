@@ -6,14 +6,8 @@ export default {
 
 <template>
     <div class="generator-preview">
-        <svg>
-            <rect
-                x="25%"
-                y="25%"
-                width="50%"
-                height="50%"
-                fill="#f5f7fa"
-            ></rect>
+        <svg viewBox="0 0 320 320" preserveAspectRatio>
+            <rect x="80" y="80" width="160" height="160" fill="#f5f7fa"></rect>
         </svg>
     </div>
 </template>
