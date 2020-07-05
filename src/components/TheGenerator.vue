@@ -33,20 +33,12 @@ export default {
     position: relative;
     display: grid;
     grid-template-columns: 320px 1fr;
-    grid-gap: var(--spacing-5);
+    grid-gap: var(--spacing-4);
     margin: 0 auto;
-    padding: var(--spacing-5);
+    padding: var(--spacing-4);
     background: #fff;
+    border: 1px solid var(--grey-100);
     border-radius: 24px;
-}
-
-.generator__control-section {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-    justify-content: center;
-    padding: 0 var(--spacing-3);
 }
 
 .generator__export-opts {

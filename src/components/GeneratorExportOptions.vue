@@ -1,14 +1,24 @@
 <script>
+import DownloadIcon from '@/assets/img/download-cloud.svg';
+import ClipBoardIcon from '@/assets/img/clipboard.svg';
+
 export default {
     name: 'GeneratorExportOptions',
-    components: {},
+    components: {
+        DownloadIcon,
+        ClipBoardIcon,
+    },
 };
 </script>
 
 <template>
     <div class="generator-export-controls">
-        <button class="generator-export-controls__btn"></button>
-        <button class="generator-export-controls__btn"></button>
+        <button class="generator-export-controls__btn">
+            <DownloadIcon />
+        </button>
+        <button class="generator-export-controls__btn">
+            <ClipBoardIcon />
+        </button>
     </div>
 </template>
 
@@ -26,7 +36,7 @@ export default {
     align-items: center;
     width: var(--spacing-6);
     height: var(--spacing-6);
-    margin-left: var(--spacing-5);
+    margin-left: var(--spacing-4);
     padding: 0;
     border-radius: 50%;
     outline: none;
