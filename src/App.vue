@@ -39,4 +39,18 @@ export default {
     grid-column: -1 / 1;
     grid-row: 2;
 }
+
+.app__content {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, var(--spacing-15))
+        minmax(0, 1fr);
+    grid-auto-rows: max-content;
+}
+
+.generator {
+    grid-row: 1;
+    grid-column: 2;
+}
 </style>

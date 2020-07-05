@@ -1,13 +1,19 @@
 <script>
 export default {
     name: 'GeneratorPreview',
+    props: {
+        points: {
+            type: Array,
+            required: true,
+        },
+    },
 };
 </script>
 
 <template>
     <div class="generator-preview">
-        <svg viewBox="0 0 320 320" preserveAspectRatio>
-            <rect x="80" y="80" width="160" height="160" fill="#f5f7fa"></rect>
+        <svg viewBox="0 0 200 200" preserveAspectRatio>
+            <polygon :points="points" transform="translate(100 100)" />
         </svg>
     </div>
 </template>
@@ -41,5 +47,6 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
+    fill: var(--grey-900);
 }
 </style>

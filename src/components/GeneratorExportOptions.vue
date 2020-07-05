@@ -38,11 +38,13 @@ export default {
     height: var(--spacing-6);
     margin-left: var(--spacing-4);
     padding: 0;
+    border: 0;
     border-radius: 50%;
     outline: none;
     cursor: pointer;
     background: #fff;
-    border: 1px solid var(--grey-100);
+
+    /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.075); */
     transition: stroke 125ms ease-in-out, transform 125ms ease-in-out;
 }
 
