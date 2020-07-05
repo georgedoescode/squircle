@@ -32,7 +32,7 @@ export default {
                 name="roundness"
                 class="generator-controls__slider"
             />
-            <label class="generator-controls__label">Fill</label>
+
             <ColorSwatch
                 class="generator-controls__color-picker"
                 :colors="[
@@ -49,9 +49,12 @@ export default {
 
 <style scoped>
 .generator-controls {
+    justify-self: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: var(--spacing-13);
+    width: 100%;
     padding: 0 var(--spacing-3);
 }
 
@@ -68,11 +71,28 @@ export default {
     grid-column: 1;
     align-self: center;
     margin-right: var(--spacing-4);
-    font-size: var(--font-size-3);
+    font-size: var(--font-size-4);
     font-weight: 700;
 }
 
 .generator-controls__slider {
     grid-column: 2;
+}
+
+.generator-controls__color-picker {
+    grid-column: -1 / 1;
+}
+
+@media only screen and (max-width: 48rem) {
+    .generator-controls {
+        padding: 0 var(--spacing-4);
+        padding-bottom: var(--spacing-6);
+    }
+    .generator-controls__inputs {
+        grid-row-gap: var(--spacing-5);
+    }
+    .generator-controls__label {
+        font-size: var(--font-size-3);
+    }
 }
 </style>

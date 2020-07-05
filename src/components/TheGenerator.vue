@@ -13,7 +13,7 @@ export default {
     data() {
         return {
             squircleOpts: {
-                n: 4,
+                n: 1.5,
                 a: 50,
                 b: 50,
             },
@@ -86,6 +86,9 @@ export default {
 
     .generator {
         grid-template-columns: 1fr;
+        padding: 0;
+        background: none;
+        box-shadow: none;
     }
 
     .generator__preview-section {

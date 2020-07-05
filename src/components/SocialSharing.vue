@@ -71,4 +71,12 @@ export default {
 .social-sharing__icon:active {
     transform: scale(0.875);
 }
+
+@media only screen and (max-width: 48rem) {
+    .social-sharing__icon {
+        width: var(--spacing-3);
+        height: var(--spacing-3);
+        margin-left: var(--spacing-3);
+    }
+}
 </style>

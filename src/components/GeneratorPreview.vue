@@ -22,6 +22,9 @@ export default {
 .generator-preview {
     position: relative;
     width: 100%;
+    justify-self: center;
+    background: #fff;
+    border-radius: 24px;
 }
 
 .generator-preview::after {
@@ -48,5 +51,12 @@ export default {
     width: 100%;
     height: 100%;
     fill: var(--grey-900);
+}
+
+@media only screen and (max-width: 48rem) {
+    .generator-preview {
+        max-width: 280px;
+        margin-bottom: var(--spacing-3);
+    }
 }
 </style>
