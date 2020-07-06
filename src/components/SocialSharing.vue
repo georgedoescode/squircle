@@ -12,7 +12,7 @@ export default {
         return {
             sharingOptions: {
                 url: 'https://www.squircley.app',
-                title: 'Squircley | Squircle Maker',
+                title: 'Squircle Maker | Squircley',
             },
         };
     },

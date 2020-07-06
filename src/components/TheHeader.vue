@@ -1,17 +1,21 @@
 <script>
 import SocialSharing from './SocialSharing.vue';
+import SquircleyLogo from '@/assets/img/squircley-logo.svg';
 
 export default {
     name: 'TheHeader',
     components: {
         SocialSharing,
+        SquircleyLogo,
     },
 };
 </script>
 
 <template>
     <header class="header">
-        <div class="header__logo"></div>
+        <div class="header__logo">
+            <SquircleyLogo />
+        </div>
         <h1 class="header__title">Squircley!</h1>
         <SocialSharing class="header__social" />
     </header>
@@ -33,8 +37,12 @@ export default {
     justify-self: start;
     width: var(--spacing-6);
     height: var(--spacing-6);
-    background: var(--grey-900);
-    border-radius: 16px;
+}
+
+.header__logo svg {
+    width: 100%;
+    height: 100%;
+    fill: var(--grey-900);
 }
 
 .header__title {

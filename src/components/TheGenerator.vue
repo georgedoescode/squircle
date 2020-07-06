@@ -13,9 +13,9 @@ export default {
     data() {
         return {
             squircleOpts: {
-                n: 1.5,
-                a: 50,
-                b: 50,
+                curvature: 8,
+                scaleX: 50,
+                scaleY: 50,
             },
             points: [],
         };
@@ -27,14 +27,14 @@ export default {
         setPoints() {
             this.points = [];
             for (let angle = 0; angle < Math.PI * 2; angle += 0.05) {
-                const na = 2 / this.squircleOpts.n;
+                const na = 2 / this.squircleOpts.curvature;
                 const x =
                     Math.pow(Math.abs(Math.cos(angle)), na) *
-                    this.squircleOpts.a *
+                    this.squircleOpts.scaleX *
                     this.sgn(Math.cos(angle));
                 const y =
                     Math.pow(Math.abs(Math.sin(angle)), na) *
-                    this.squircleOpts.b *
+                    this.squircleOpts.scaleY *
                     this.sgn(Math.sin(angle));
 
                 this.points.push([x, y]);
@@ -49,6 +49,10 @@ export default {
                 return 0;
             }
         },
+        handleControlChange({ id, value }) {
+            this.squircleOpts[id] = value;
+            this.setPoints();
+        },
     },
 };
 </script>
@@ -56,7 +60,7 @@ export default {
 <template>
     <div class="generator">
         <GeneratorPreview :points="points" />
-        <GeneratorControls />
+        <GeneratorControls @controls-changed="handleControlChange" />
         <GeneratorExportOptions class="generator__export-opts" />
     </div>
 </template>
@@ -92,9 +96,9 @@ export default {
     }
 
     .generator__preview-section {
+        justify-self: center;
         width: 100%;
         max-width: 320px;
-        justify-self: center;
     }
 
     .generator__control-section {

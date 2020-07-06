@@ -43,8 +43,6 @@ export default {
     outline: none;
     cursor: pointer;
     background: #fff;
-
-    /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.075); */
     transition: stroke 125ms ease-in-out, transform 125ms ease-in-out;
 }
 

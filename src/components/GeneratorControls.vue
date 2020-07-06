@@ -1,15 +1,15 @@
 <script>
-import ColorSwatch from './ColorSwatch.vue';
-
 export default {
     name: 'GeneratorControls',
-    components: {
-        ColorSwatch,
-    },
     data() {
         return {
             color: '#1f2933',
         };
+    },
+    methods: {
+        handleControlChange(e) {
+            this.$emit('controls-changed', e.target);
+        },
     },
 };
 </script>
@@ -17,31 +17,41 @@ export default {
 <template>
     <div class="generator-controls">
         <div class="generator-controls__inputs">
-            <label for="scaleX" class="generator-controls__label">
-                Scale X
-            </label>
-            <BaseRangeInput name="scaleX" class="generator-controls__slider" />
-            <label for="scaleY" class="generator-controls__label">
-                Scale Y
-            </label>
-            <BaseRangeInput name="scaleY" class="generator-controls__slider" />
-            <label for="roundness" class="generator-controls__label">
-                Roundness
+            <label for="width" class="generator-controls__label">
+                Width
             </label>
             <BaseRangeInput
-                name="roundness"
+                name="width"
                 class="generator-controls__slider"
+                :min="0"
+                :max="100"
+                :value="50"
+                :step="1"
+                @change="handleControlChange"
             />
-
-            <ColorSwatch
-                class="generator-controls__color-picker"
-                :colors="[
-                    '#1f2933',
-                    '#323f4b',
-                    '#3e4c59',
-                    '#52606d',
-                    '#616e7c',
-                ]"
+            <label for="height" class="generator-controls__label">
+                Height
+            </label>
+            <BaseRangeInput
+                name="height"
+                class="generator-controls__slider"
+                :min="0"
+                :max="100"
+                :value="50"
+                :step="1"
+                @change="handleControlChange"
+            />
+            <label for="curvature" class="generator-controls__label">
+                Curvature
+            </label>
+            <BaseRangeInput
+                name="curvature"
+                class="generator-controls__slider"
+                :min="1"
+                :max="15"
+                :value="8"
+                :step="0.01"
+                @change="handleControlChange"
             />
         </div>
     </div>
