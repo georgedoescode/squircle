@@ -76,7 +76,7 @@ export default {
     .social-sharing__icon {
         width: var(--spacing-3);
         height: var(--spacing-3);
-        margin-left: var(--spacing-3);
+        margin-left: var(--spacing-4);
     }
 }
 </style>

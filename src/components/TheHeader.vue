@@ -62,8 +62,8 @@ export default {
 
 @media only screen and (max-width: 48rem) {
     .header {
-        padding: var(--spacing-5) var(--spacing-4);
-        margin-bottom: var(--spacing-3);
+        padding: var(--spacing-4);
+        margin-bottom: var(--spacing-4);
     }
 
     .header__logo {

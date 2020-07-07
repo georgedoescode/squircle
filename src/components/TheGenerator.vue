@@ -14,8 +14,7 @@ export default {
         return {
             squircleOpts: {
                 curvature: 8,
-                scaleX: 50,
-                scaleY: 50,
+                scale: 50,
             },
             points: [],
         };
@@ -26,15 +25,15 @@ export default {
     methods: {
         setPoints() {
             this.points = [];
-            for (let angle = 0; angle < Math.PI * 2; angle += 0.05) {
+            for (let angle = 0; angle < Math.PI * 2; angle += 0.01) {
                 const na = 2 / this.squircleOpts.curvature;
                 const x =
                     Math.pow(Math.abs(Math.cos(angle)), na) *
-                    this.squircleOpts.scaleX *
+                    this.squircleOpts.scale *
                     this.sgn(Math.cos(angle));
                 const y =
                     Math.pow(Math.abs(Math.sin(angle)), na) *
-                    this.squircleOpts.scaleY *
+                    this.squircleOpts.scale *
                     this.sgn(Math.sin(angle));
 
                 this.points.push([x, y]);

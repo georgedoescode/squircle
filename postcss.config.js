@@ -7,6 +7,9 @@ module.exports = ({ file, options, env }) => {
             'postcss-import': {},
             'postcss-preset-env': {
                 importFrom: './src/assets/styles/app.css',
+                features: {
+                    'custom-properties': false,
+                },
             },
             cssnano: mode === 'production' ? {} : false,
         },
