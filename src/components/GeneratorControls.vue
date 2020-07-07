@@ -7,10 +7,25 @@ export default {
     components: {
         VSwatches,
     },
+    props: {
+        initialFill: {
+            type: String,
+            required: true,
+        },
+    },
+
     data() {
         return {
-            color: '#1f2933',
+            fill: this.initialFill,
         };
+    },
+    watch: {
+        fill(newVal) {
+            this.$emit('controls-changed', {
+                id: 'fill',
+                value: newVal,
+            });
+        },
     },
     methods: {
         handleControlChange(e) {
@@ -53,23 +68,24 @@ export default {
             <div class="generator-controls__swatch">
                 <input
                     id="colorHex"
-                    v-model="color"
+                    v-model="fill"
                     class="generator-conrols__swatch-text"
                     type="text"
                     name="colorHex"
                 />
                 <VSwatches
-                    v-model="color"
+                    v-model="fill"
                     :trigger-style="{
-                        width: '48px',
-                        height: '32px',
-                        borderRadius: '0 8px 8px 0',
+                        width: '64px',
+                        height: '48px',
+                        borderRadius: '0 16px 16px 0',
                     }"
                 />
             </div>
             <label for="quality" class="generator-controls__label">
-                Quality
+                Detail
             </label>
+            <div class="generator-controls__detail"></div>
         </div>
     </div>
 </template>
@@ -116,9 +132,9 @@ export default {
     align-items: center;
     justify-content: space-between;
     padding-left: var(--spacing-3);
-    height: var(--spacing-5);
+    height: var(--spacing-6);
     background: var(--grey-000);
-    border-radius: 8px;
+    border-radius: 12px;
 }
 
 .generator-conrols__swatch-text {
@@ -126,6 +142,13 @@ export default {
     background: transparent;
     outline: none;
     width: 100%;
+    text-transform: uppercase;
+}
+
+.generator-controls__detail {
+    height: var(--spacing-5);
+    border: 1px solid var(--grey-200);
+    border-radius: 8px;
 }
 
 @media only screen and (max-width: 48rem) {
@@ -135,7 +158,7 @@ export default {
     }
 
     .generator-controls__inputs {
-        grid-row-gap: var(--spacing-4);
+        grid-row-gap: var(--spacing-5);
     }
 
     .generator-controls__label {

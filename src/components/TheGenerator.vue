@@ -15,6 +15,7 @@ export default {
             squircleOpts: {
                 curvature: 8,
                 scale: 50,
+                fill: '#1f2933',
             },
             points: [],
         };
@@ -58,8 +59,11 @@ export default {
 
 <template>
     <div class="generator">
-        <GeneratorPreview :points="points" />
-        <GeneratorControls @controls-changed="handleControlChange" />
+        <GeneratorPreview :points="points" :fill="squircleOpts.fill" />
+        <GeneratorControls
+            :initial-fill="squircleOpts.fill"
+            @controls-changed="handleControlChange"
+        />
         <GeneratorExportOptions class="generator__export-opts" />
     </div>
 </template>

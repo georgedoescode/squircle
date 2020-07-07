@@ -6,13 +6,17 @@ export default {
             type: Array,
             required: true,
         },
+        fill: {
+            type: String,
+            required: true,
+        },
     },
 };
 </script>
 
 <template>
     <div class="generator-preview">
-        <svg viewBox="0 0 200 200" preserveAspectRatio>
+        <svg viewBox="0 0 200 200" preserveAspectRatio :fill="fill">
             <polygon :points="points" transform="translate(100 100)" />
         </svg>
     </div>
@@ -50,7 +54,6 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    fill: var(--grey-900);
 }
 
 @media only screen and (max-width: 48rem) {
