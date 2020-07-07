@@ -78,7 +78,7 @@ export default {
                     :trigger-style="{
                         width: '64px',
                         height: '48px',
-                        borderRadius: '0 16px 16px 0',
+                        borderRadius: '0 12px 12px 0',
                     }"
                 />
             </div>
