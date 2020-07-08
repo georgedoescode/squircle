@@ -2,6 +2,7 @@
 import TheHeader from './components/TheHeader.vue';
 import TheGenerator from './components/TheGenerator.vue';
 import TheWaveBackground from './components/TheWaveBackground.vue';
+import TheSquircleExplosion from './components/TheSquircleExplosion.vue';
 
 export default {
     name: 'App',
@@ -9,6 +10,7 @@ export default {
         TheHeader,
         TheGenerator,
         TheWaveBackground,
+        TheSquircleExplosion,
     },
 };
 </script>
@@ -17,6 +19,7 @@ export default {
     <div class="app">
         <TheHeader class="app__header" />
         <TheWaveBackground class="app__background" />
+        <TheSquircleExplosion />
         <div class="app__content">
             <TheGenerator />
             <p class="about-text">
@@ -26,6 +29,12 @@ export default {
                 illum mollitia aut assumenda corporis inventore deleniti,
                 corrupti sit. Ipsa dicta tenetur dolores eligendi enim quisquam
                 adipisci magni! Commodi voluptates neque maiores est!
+            </p>
+            <p class="about-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Aperiam laborum eos ipsum hic quod velit perferendis in quasi
+                officiis? Dicta, sint quae accusantium saepe quia itaque rerum
+                quod ratione libero.
             </p>
         </div>
     </div>
@@ -63,24 +72,22 @@ export default {
 .generator {
     grid-row: 1;
     grid-column: 2;
-    margin-bottom: var(--spacing-8);
+    margin-bottom: var(--spacing-9);
+}
+
+.squircle-explosion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 540px;
 }
 
 .about-text {
-    grid-row: 2;
     grid-column: -1 / 1;
     font-size: var(--font-size-3);
     line-height: 1.75;
     width: 50%;
-}
-
-.app__bb {
-    position: absolute;
-    top: 2rem;
-    left: 0;
-    width: 100%;
-    opacity: 0.1;
-
-    /* z-index: -1; */
+    margin-bottom: var(--spacing-5);
 }
 </style>
