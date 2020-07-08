@@ -13,7 +13,6 @@ export default {
             required: true,
         },
     },
-
     data() {
         return {
             fill: this.initialFill,
@@ -22,16 +21,19 @@ export default {
                     id: 'low',
                     label: 'Low',
                     checked: false,
+                    value: 0.1,
                 },
                 {
                     id: 'med',
                     label: 'Med',
                     checked: true,
+                    value: 0.05,
                 },
                 {
                     id: 'high',
                     label: 'High',
                     checked: false,
+                    value: 0.01,
                 },
             ],
         };
@@ -46,7 +48,10 @@ export default {
     },
     methods: {
         handleControlChange(e) {
-            this.$emit('controls-changed', e.target);
+            this.$emit('controls-changed', {
+                id: e.target.id,
+                value: e.target.value,
+            });
         },
         handleDetailChange(e) {
             const { id } = e.target;
@@ -56,6 +61,11 @@ export default {
 
                 if (state.id === id) {
                     state.checked = true;
+
+                    this.$emit('controls-changed', {
+                        id: 'detail',
+                        value: state.value,
+                    });
                 } else {
                     state.checked = false;
                 }
@@ -192,6 +202,7 @@ export default {
 
     .generator-controls__inputs {
         grid-row-gap: var(--spacing-5);
+        grid-auto-rows: minmax(var(--spacing-5), max-content);
     }
 
     .generator-controls__label {

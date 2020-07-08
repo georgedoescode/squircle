@@ -15,6 +15,7 @@ export default {
             squircleOpts: {
                 curvature: 8,
                 scale: 50,
+                detail: 0.01,
                 fill: '#1f2933',
             },
             points: [],
@@ -26,7 +27,11 @@ export default {
     methods: {
         setPoints() {
             this.points = [];
-            for (let angle = 0; angle < Math.PI * 2; angle += 0.01) {
+            for (
+                let angle = 0;
+                angle < Math.PI * 2;
+                angle += this.squircleOpts.detail
+            ) {
                 const na = 2 / this.squircleOpts.curvature;
                 const x =
                     Math.pow(Math.abs(Math.cos(angle)), na) *
