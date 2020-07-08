@@ -26,6 +26,7 @@ export default {
 <style>
 .squircle-explosion {
     position: relative;
+    pointer-events: none;
 }
 
 .squircle-explosion__squircle {
@@ -37,7 +38,7 @@ export default {
 
 .squircle-explosion__squircle:nth-of-type(1) {
     top: var(--spacing-10);
-    left: var(--spacing-7);
+    left: var(--spacing-6);
     transform: rotate(32deg);
 }
 
@@ -66,7 +67,7 @@ export default {
 .squircle-explosion__squircle:nth-of-type(5) {
     width: 24px;
     height: 24px;
-    top: var(--spacing-9);
+    top: var(--spacing-8);
     right: var(--spacing-12);
     transform: rotate(128deg);
 }

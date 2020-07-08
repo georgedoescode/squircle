@@ -5,8 +5,10 @@ import App from './App.vue';
 import upperFirst from 'lodash/upperFirst';
 import camelCase from 'lodash/camelCase';
 import VueSocialSharing from 'vue-social-sharing';
+import Toasted from 'vue-toasted';
 
 Vue.use(VueSocialSharing);
+Vue.use(Toasted);
 
 Vue.config.productionTip = false;
 

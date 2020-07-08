@@ -23,6 +23,10 @@ export default {
         copySVGToClipBoard() {
             const content = document.querySelector('#squircleSVG').outerHTML;
             copy(content);
+            this.$toasted.show('Squircle copied to clipboard!', {
+                position: 'bottom-center',
+                duration: 1500,
+            });
         },
     },
 };

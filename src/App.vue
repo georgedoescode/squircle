@@ -3,6 +3,7 @@ import TheHeader from './components/TheHeader.vue';
 import TheGenerator from './components/TheGenerator.vue';
 import TheWaveBackground from './components/TheWaveBackground.vue';
 import TheSquircleExplosion from './components/TheSquircleExplosion.vue';
+import SquircleDemo from '@/assets/img/squircle-demo.svg';
 
 export default {
     name: 'App',
@@ -11,6 +12,7 @@ export default {
         TheGenerator,
         TheWaveBackground,
         TheSquircleExplosion,
+        SquircleDemo,
     },
 };
 </script>
@@ -22,20 +24,18 @@ export default {
         <TheSquircleExplosion />
         <div class="app__content">
             <TheGenerator />
-            <p class="about-text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod
-                maxime quam sequi, corrupti quibusdam velit dolore nobis ex!
-                Nihil sunt placeat magni dolorem in quaerat aspernatur sapiente
-                illum mollitia aut assumenda corporis inventore deleniti,
-                corrupti sit. Ipsa dicta tenetur dolores eligendi enim quisquam
-                adipisci magni! Commodi voluptates neque maiores est!
-            </p>
-            <p class="about-text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Aperiam laborum eos ipsum hic quod velit perferendis in quasi
-                officiis? Dicta, sint quae accusantium saepe quia itaque rerum
-                quod ratione libero.
-            </p>
+            <div class="app__content-grid">
+                <p class="about-text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Quod maxime quam sequi, corrupti quibusdam velit dolore
+                    nobis ex! Nihil sunt placeat magni dolorem in quaerat
+                    aspernatur sapiente illum mollitia aut assumenda corporis
+                    inventore deleniti, corrupti sit. Ipsa dicta tenetur dolores
+                    eligendi enim quisquam adipisci magni! Commodi voluptates
+                    neque maiores est!
+                </p>
+                <SquircleDemo class="squircle-demo" />
+            </div>
         </div>
     </div>
 </template>
@@ -58,20 +58,12 @@ export default {
 }
 
 .app__content {
-    display: grid;
-    grid-template-columns:
-        minmax(0, 1fr)
-        minmax(0, 56rem)
-        minmax(0, 1fr);
-    grid-auto-rows: max-content;
-    max-width: 1280px;
-    margin: 0 auto;
     padding-bottom: var(--spacing-6);
 }
 
 .generator {
-    grid-row: 1;
-    grid-column: 2;
+    max-width: 56rem;
+    margin: 0 auto;
     margin-bottom: var(--spacing-9);
 }
 
@@ -83,11 +75,19 @@ export default {
     height: 540px;
 }
 
+.app__content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
 .about-text {
-    grid-column: -1 / 1;
     font-size: var(--font-size-3);
     line-height: 1.75;
-    width: 50%;
     margin-bottom: var(--spacing-5);
+}
+
+.squircle-demo {
+    justify-self: end;
 }
 </style>
