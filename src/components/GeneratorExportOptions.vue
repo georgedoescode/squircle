@@ -30,10 +30,15 @@ export default {
 
 <template>
     <div class="generator-export-controls">
-        <button class="generator-export-controls__btn" @click="downloadSVG">
+        <button
+            aria-label="download squircle SVG"
+            class="generator-export-controls__btn"
+            @click="downloadSVG"
+        >
             <DownloadIcon />
         </button>
         <button
+            aria-label="copy squircle SVG to clipboard"
             class="generator-export-controls__btn"
             @click="copySVGToClipBoard"
         >
@@ -58,7 +63,7 @@ export default {
     height: var(--spacing-6);
     margin-left: var(--spacing-4);
     padding: 0;
-    border: 0;
+    border: 1px solid var(--grey-100);
     border-radius: 50%;
     outline: none;
     cursor: pointer;
@@ -70,6 +75,7 @@ export default {
     width: 24px;
     height: 24px;
     stroke: var(--grey-900);
+    stroke-width: 2px;
 }
 
 .generator-export-controls__btn:hover {

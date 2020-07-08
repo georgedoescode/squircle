@@ -137,7 +137,6 @@ export default {
     align-items: center;
     max-width: var(--spacing-13);
     width: 100%;
-    padding: 0 var(--spacing-3);
 }
 
 .generator-controls__inputs {

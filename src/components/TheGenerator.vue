@@ -15,7 +15,7 @@ export default {
             squircleOpts: {
                 curvature: 8,
                 scale: 50,
-                detail: 0.01,
+                detail: 0.1,
                 fill: '#1f2933',
             },
             points: [],
@@ -78,8 +78,8 @@ export default {
     position: relative;
     display: grid;
     grid-template-columns: 368px 1fr;
-    grid-gap: var(--spacing-4);
-    padding: var(--spacing-4);
+    grid-gap: var(--spacing-5);
+    padding: var(--spacing-5);
     background: #fff;
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.075);
     border-radius: 32px;

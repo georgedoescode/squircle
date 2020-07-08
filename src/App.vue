@@ -73,4 +73,14 @@ export default {
     line-height: 1.75;
     width: 50%;
 }
+
+.app__bb {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    width: 100%;
+    opacity: 0.1;
+
+    /* z-index: -1; */
+}
 </style>
