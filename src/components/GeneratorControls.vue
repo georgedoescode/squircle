@@ -18,16 +18,10 @@ export default {
             fill: this.initialFill,
             detailToggleState: [
                 {
-                    id: 'low',
-                    label: 'Low',
-                    checked: false,
-                    value: 0.1,
-                },
-                {
-                    id: 'med',
-                    label: 'Med',
+                    id: 'normal',
+                    label: 'Normal',
                     checked: true,
-                    value: 0.05,
+                    value: 0.1,
                 },
                 {
                     id: 'high',
@@ -123,10 +117,10 @@ export default {
                 />
             </div>
             <label for="quality" class="generator-controls__label">
-                Detail
+                Smoothing
             </label>
 
-            <BaseThreeBtnToggle
+            <BaseTwoBtnToggle
                 :toggle-state="detailToggleState"
                 class="generator-controls__detail"
                 @change="handleDetailChange"
@@ -158,7 +152,7 @@ export default {
 .generator-controls__label {
     grid-column: 1;
     align-self: center;
-    margin-right: var(--spacing-4);
+    margin-right: var(--spacing-6);
     font-size: var(--font-size-4);
     font-weight: 700;
 }

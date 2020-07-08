@@ -19,7 +19,7 @@ export default {
         >
             <input
                 :id="option.id"
-                type="checkbox"
+                type="radio"
                 :name="option.id"
                 :checked="option.checked ? 'checked' : ''"
                 @click="$emit('change', $event)"
@@ -33,7 +33,7 @@ export default {
 .base-three-btn-toggle {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-auto-columns: 1fr;
     align-items: center;
     height: var(--spacing-5);
@@ -56,8 +56,7 @@ export default {
     cursor: pointer;
 }
 
-.base-three-btn-toggle > div:nth-of-type(2) {
-    border-left: 1px solid var(--grey-200);
+.base-three-btn-toggle > div:nth-of-type(1) {
     border-right: 1px solid var(--grey-200);
 }
 

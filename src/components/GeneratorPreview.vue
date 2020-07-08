@@ -16,7 +16,13 @@ export default {
 
 <template>
     <div class="generator-preview">
-        <svg viewBox="0 0 200 200" preserveAspectRatio :fill="fill">
+        <svg
+            id="squircleSVG"
+            viewBox="0 0 200 200"
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            :fill="fill"
+        >
             <polygon :points="points" transform="translate(100 100)" />
         </svg>
     </div>

@@ -2,21 +2,41 @@
 import DownloadIcon from '@/assets/img/download-cloud.svg';
 import ClipBoardIcon from '@/assets/img/clipboard.svg';
 
+import { saveAs } from 'file-saver';
+import copy from 'copy-to-clipboard';
+
 export default {
     name: 'GeneratorExportOptions',
     components: {
         DownloadIcon,
         ClipBoardIcon,
     },
+    methods: {
+        downloadSVG() {
+            const content = document.querySelector('#squircleSVG').outerHTML;
+            const blob = new Blob([content], {
+                type: 'text/plain;charset=utf-8',
+            });
+
+            saveAs(blob, 'squircle.svg');
+        },
+        copySVGToClipBoard() {
+            const content = document.querySelector('#squircleSVG').outerHTML;
+            copy(content);
+        },
+    },
 };
 </script>
 
 <template>
     <div class="generator-export-controls">
-        <button class="generator-export-controls__btn">
+        <button class="generator-export-controls__btn" @click="downloadSVG">
             <DownloadIcon />
         </button>
-        <button class="generator-export-controls__btn">
+        <button
+            class="generator-export-controls__btn"
+            @click="copySVGToClipBoard"
+        >
             <ClipBoardIcon />
         </button>
     </div>
