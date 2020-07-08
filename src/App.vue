@@ -52,7 +52,7 @@ export default {
     display: grid;
     grid-template-columns:
         minmax(0, 1fr)
-        minmax(0, var(--spacing-15))
+        minmax(0, 56rem)
         minmax(0, 1fr);
     grid-auto-rows: max-content;
     max-width: 1280px;

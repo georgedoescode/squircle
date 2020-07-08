@@ -72,7 +72,7 @@ export default {
 .generator {
     position: relative;
     display: grid;
-    grid-template-columns: 320px 1fr;
+    grid-template-columns: 368px 1fr;
     grid-gap: var(--spacing-4);
     padding: var(--spacing-4);
     background: #fff;
@@ -86,7 +86,7 @@ export default {
     right: calc(var(--spacing-5));
 }
 
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 56rem) {
     .generator-wrapper {
         width: 100%;
     }

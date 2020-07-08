@@ -17,6 +17,23 @@ export default {
     data() {
         return {
             fill: this.initialFill,
+            detailToggleState: [
+                {
+                    id: 'low',
+                    label: 'Low',
+                    checked: false,
+                },
+                {
+                    id: 'med',
+                    label: 'Med',
+                    checked: true,
+                },
+                {
+                    id: 'high',
+                    label: 'High',
+                    checked: false,
+                },
+            ],
         };
     },
     watch: {
@@ -30,6 +47,19 @@ export default {
     methods: {
         handleControlChange(e) {
             this.$emit('controls-changed', e.target);
+        },
+        handleDetailChange(e) {
+            const { id } = e.target;
+
+            for (const propertyIndex in this.detailToggleState) {
+                const state = this.detailToggleState[~~propertyIndex];
+
+                if (state.id === id) {
+                    state.checked = true;
+                } else {
+                    state.checked = false;
+                }
+            }
         },
     },
 };
@@ -85,7 +115,12 @@ export default {
             <label for="quality" class="generator-controls__label">
                 Detail
             </label>
-            <div class="generator-controls__detail"></div>
+
+            <BaseThreeBtnToggle
+                :toggle-state="detailToggleState"
+                class="generator-controls__detail"
+                @change="handleDetailChange"
+            />
         </div>
     </div>
 </template>
@@ -104,7 +139,7 @@ export default {
 .generator-controls__inputs {
     display: grid;
     grid-template-columns: max-content 1fr;
-    grid-auto-rows: minmax(var(--spacing-5), max-content);
+    grid-auto-rows: minmax(var(--spacing-6), max-content);
     grid-row-gap: var(--spacing-5);
     justify-content: center;
     width: 100%;
@@ -146,12 +181,10 @@ export default {
 }
 
 .generator-controls__detail {
-    height: var(--spacing-5);
-    border: 1px solid var(--grey-200);
-    border-radius: 8px;
+    align-self: center;
 }
 
-@media only screen and (max-width: 48rem) {
+@media only screen and (max-width: 56rem) {
     .generator-controls {
         padding: 0 var(--spacing-4);
         padding-bottom: var(--spacing-6);
