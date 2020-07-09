@@ -73,7 +73,24 @@ export default {
     }
 
     .header__title {
+        font-size: var(--font-size-6);
+    }
+}
+
+@media only screen and (max-width: 32rem) {
+    .header__social {
+        display: none;
+    }
+
+    .header__title {
+        grid-column: 1;
+        justify-self: start;
         font-size: var(--font-size-5);
+    }
+
+    .header__logo {
+        grid-column: 3;
+        justify-self: end;
     }
 }
 </style>

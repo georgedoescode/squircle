@@ -190,7 +190,7 @@ export default {
 @media only screen and (max-width: 56rem) {
     .generator-controls {
         padding: 0 var(--spacing-4);
-        padding-bottom: var(--spacing-6);
+        padding-bottom: var(--spacing-3);
     }
 
     .generator-controls__inputs {
@@ -200,6 +200,7 @@ export default {
 
     .generator-controls__label {
         font-size: var(--font-size-3);
+        margin-right: var(--spacing-5);
     }
 }
 </style>

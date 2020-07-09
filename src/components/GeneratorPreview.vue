@@ -65,7 +65,7 @@ export default {
 @media only screen and (max-width: 56rem) {
     .generator-preview {
         max-width: 280px;
-        margin-bottom: var(--spacing-3);
+        margin-bottom: var(--spacing-4);
     }
 }
 </style>

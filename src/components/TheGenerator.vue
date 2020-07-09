@@ -112,5 +112,14 @@ export default {
     .generator__control-section {
         padding: 0;
     }
+
+    .generator__export-opts {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        max-width: var(--spacing-13);
+        margin: 0 auto;
+        padding: 0 var(--spacing-4);
+    }
 }
 </style>

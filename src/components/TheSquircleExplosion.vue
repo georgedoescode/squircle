@@ -25,7 +25,7 @@ export default {
 
 <style>
 .squircle-explosion {
-    position: relative;
+    position: absolute;
     pointer-events: none;
 }
 
@@ -72,7 +72,7 @@ export default {
     transform: rotate(128deg);
 }
 
-@media only screen and (max-width: 56rem) {
+@media only screen and (max-width: 72rem) {
     .squircle-explosion {
         display: none;
     }
