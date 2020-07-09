@@ -80,7 +80,7 @@ export default {
                 class="generator-controls__slider"
                 :min="0"
                 :max="1"
-                :value="0.5"
+                :value="0.75"
                 :step="0.01"
                 @change="handleControlChange"
             />
@@ -124,6 +124,7 @@ export default {
     flex-direction: column;
     max-width: var(--spacing-13);
     width: 100%;
+    padding-right: var(--spacing-1);
 }
 
 .generator-controls__inputs {

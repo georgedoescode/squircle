@@ -59,7 +59,7 @@ input[type='range'] {
     background: transparent;
     outline: none;
 
-    --thumb-width: 12px;
+    --thumb-width: 16px;
     --thumb-height: 32px;
     --thumb-radius: 16px;
     --thumb-bg: var(--grey-900);

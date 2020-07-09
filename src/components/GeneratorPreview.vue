@@ -53,7 +53,7 @@ export default {
     width: 100%;
     height: 100%;
     content: '';
-    border: 1px dashed var(--grey-100);
+    border: 2px dashed var(--grey-100);
     border-radius: 24px;
 }
 
