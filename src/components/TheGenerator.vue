@@ -11,50 +11,40 @@ export default {
     data() {
         return {
             squircleOpts: {
-                curvature: 8,
-                scale: 50,
-                detail: 0.1,
+                curvature: 0.5,
+                scale: 100,
                 fill: '#1f2933',
             },
-            points: [],
+            path: '',
         };
     },
     mounted() {
-        this.setPoints();
+        this.setPath(
+            this.squircleOpts.scale,
+            this.squircleOpts.scale,
+            this.squircleOpts.curvature
+        );
     },
     methods: {
-        setPoints() {
-            this.points = [];
-            for (
-                let angle = 0;
-                angle < Math.PI * 2;
-                angle += this.squircleOpts.detail
-            ) {
-                const na = 2 / this.squircleOpts.curvature;
-                const x =
-                    Math.pow(Math.abs(Math.cos(angle)), na) *
-                    this.squircleOpts.scale *
-                    this.sgn(Math.cos(angle));
-                const y =
-                    Math.pow(Math.abs(Math.sin(angle)), na) *
-                    this.squircleOpts.scale *
-                    this.sgn(Math.sin(angle));
+        setPath(w = 100, h = 100, curvature = 0.5) {
+            const shiftW = (w / 2) * (1 - curvature);
+            const shiftH = (h / 2) * (1 - curvature);
 
-                this.points.push([x, y]);
-            }
-        },
-        sgn(value) {
-            if (value > 0) {
-                return 1;
-            } else if (value < 0) {
-                return -1;
-            } else {
-                return 0;
-            }
+            this.path = `
+                M 0, ${h / 2}
+                C 0, ${shiftW} ${shiftH}, 0 ${w / 2}, 0
+                S ${w}, ${shiftH} ${w}, ${h / 2}
+                  ${w - shiftW}, ${h - 0} ${w / 2}, ${h}
+                  0, ${w - shiftH} 0, ${h / 2}
+            `;
         },
         handleControlChange({ id, value }) {
             this.squircleOpts[id] = value;
-            this.setPoints();
+            this.setPath(
+                this.squircleOpts.scale,
+                this.squircleOpts.scale,
+                this.squircleOpts.curvature
+            );
         },
     },
 };
@@ -62,7 +52,7 @@ export default {
 
 <template>
     <div class="generator">
-        <GeneratorPreview :points="points" :fill="squircleOpts.fill" />
+        <GeneratorPreview :path="path" :fill="squircleOpts.fill" />
         <GeneratorControls
             :initial-fill="squircleOpts.fill"
             @controls-changed="handleControlChange"

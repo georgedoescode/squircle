@@ -18,20 +18,6 @@ export default {
     data() {
         return {
             fill: this.initialFill,
-            detailToggleState: [
-                {
-                    id: 'normal',
-                    label: 'Normal',
-                    checked: true,
-                    value: 0.1,
-                },
-                {
-                    id: 'high',
-                    label: 'High',
-                    checked: false,
-                    value: 0.01,
-                },
-            ],
         };
     },
     watch: {
@@ -81,8 +67,8 @@ export default {
                 name="scale"
                 class="generator-controls__slider"
                 :min="0"
-                :max="100"
-                :value="50"
+                :max="200"
+                :value="100"
                 :step="1"
                 @change="handleControlChange"
             />
@@ -92,9 +78,9 @@ export default {
             <BaseRangeInput
                 name="curvature"
                 class="generator-controls__slider"
-                :min="1"
-                :max="15"
-                :value="8"
+                :min="0"
+                :max="1"
+                :value="0.5"
                 :step="0.01"
                 @change="handleControlChange"
             />

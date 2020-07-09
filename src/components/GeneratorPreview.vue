@@ -2,8 +2,8 @@
 export default {
     name: 'GeneratorPreview',
     props: {
-        points: {
-            type: Array,
+        path: {
+            type: String,
             required: true,
         },
         fill: {
@@ -23,7 +23,7 @@ export default {
             version="1.1"
             :fill="fill"
         >
-            <polygon :points="points" transform="translate(100 100)" />
+            <path :d="path" />
         </svg>
     </div>
 </template>
