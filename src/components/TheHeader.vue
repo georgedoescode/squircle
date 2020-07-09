@@ -1,6 +1,6 @@
 <script>
-import SocialSharing from './SocialSharing.vue';
-import SquircleyLogo from '@/assets/img/squircley-logo.svg';
+import SocialSharing from './SocialSharing.vue?inline';
+import SquircleyLogo from '@/assets/img/squircley-logo.svg?inline';
 
 export default {
     name: 'TheHeader',

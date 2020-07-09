@@ -1,14 +1,12 @@
 <script>
 import GeneratorPreview from './GeneratorPreview.vue';
 import GeneratorControls from './GeneratorControls.vue';
-import GeneratorExportOptions from './GeneratorExportOptions.vue';
 
 export default {
     name: 'TheGenerator',
     components: {
         GeneratorPreview,
         GeneratorControls,
-        GeneratorExportOptions,
     },
     data() {
         return {
@@ -69,7 +67,6 @@ export default {
             :initial-fill="squircleOpts.fill"
             @controls-changed="handleControlChange"
         />
-        <GeneratorExportOptions class="generator__export-opts" />
     </div>
 </template>
 
@@ -83,12 +80,6 @@ export default {
     background: #fff;
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.075);
     border-radius: 32px;
-}
-
-.generator__export-opts {
-    position: absolute;
-    bottom: -24px;
-    right: calc(var(--spacing-5));
 }
 
 @media screen and (max-width: 56rem) {
@@ -111,15 +102,6 @@ export default {
 
     .generator__control-section {
         padding: 0;
-    }
-
-    .generator__export-opts {
-        position: relative;
-        bottom: auto;
-        right: auto;
-        max-width: var(--spacing-13);
-        margin: 0 auto;
-        padding: 0 var(--spacing-4);
     }
 }
 </style>

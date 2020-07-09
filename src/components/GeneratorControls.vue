@@ -1,11 +1,13 @@
 <script>
 import VSwatches from 'vue-swatches';
 import 'vue-swatches/dist/vue-swatches.css';
+import GeneratorExportOptions from './GeneratorExportOptions.vue';
 
 export default {
     name: 'GeneratorControls',
     components: {
         VSwatches,
+        GeneratorExportOptions,
     },
     props: {
         initialFill: {
@@ -116,15 +118,13 @@ export default {
                     }"
                 />
             </div>
-            <label for="quality" class="generator-controls__label">
-                Smoothing
-            </label>
-
-            <BaseTwoBtnToggle
-                :toggle-state="detailToggleState"
-                class="generator-controls__detail"
-                @change="handleDetailChange"
-            />
+            <hr />
+            <label
+                for=""
+                class="generator-controls__label generator-controls__label--export"
+                >Export</label
+            >
+            <GeneratorExportOptions />
         </div>
     </div>
 </template>
@@ -135,6 +135,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     max-width: var(--spacing-13);
     width: 100%;
 }
@@ -142,7 +143,7 @@ export default {
 .generator-controls__inputs {
     display: grid;
     grid-template-columns: max-content 1fr;
-    grid-auto-rows: minmax(var(--spacing-6), max-content);
+    grid-template-rows: var(--spacing-6) var(--spacing-6) var(--spacing-6) max-content max-content;
     grid-row-gap: var(--spacing-5);
     justify-content: center;
     width: 100%;
@@ -185,6 +186,18 @@ export default {
 
 .generator-controls__detail {
     align-self: center;
+}
+
+.generator-export-controls {
+    grid-column: 2;
+}
+
+hr {
+    grid-column: -1 / 1;
+    border: 0;
+    height: 2px;
+    background: var(--grey-000);
+    margin: var(--spacing-1) 0;
 }
 
 @media only screen and (max-width: 56rem) {

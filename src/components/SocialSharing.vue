@@ -1,6 +1,6 @@
 <script>
-import RedditLogo from '@/assets/img/social-icons/reddit-alien.svg';
-import TwitterLogo from '@/assets/img/social-icons/twitter.svg';
+import RedditLogo from '@/assets/img/social-icons/reddit-alien.svg?inline';
+import TwitterLogo from '@/assets/img/social-icons/twitter.svg?inline';
 
 export default {
     name: 'SocialSharing',

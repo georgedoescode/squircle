@@ -1,7 +1,7 @@
 <script>
-import Squircle1 from '@/assets/img/squircle-01.svg';
-import Squircle2 from '@/assets/img/squircle-02.svg';
-import Squircle3 from '@/assets/img/squircle-03.svg';
+import Squircle1 from '@/assets/img/squircle-01.svg?inline';
+import Squircle2 from '@/assets/img/squircle-02.svg?inline';
+import Squircle3 from '@/assets/img/squircle-03.svg?inline';
 
 export default {
     name: 'TheSquircleExplosion',

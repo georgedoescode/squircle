@@ -69,7 +69,9 @@ input[type='range'] {
 
 input[type='range']:focus {
     outline: none;
+}
 
+input[type='range']:hover {
     --track-bg: var(--grey-100);
 }
 

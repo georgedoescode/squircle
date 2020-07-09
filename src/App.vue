@@ -3,7 +3,7 @@ import TheHeader from './components/TheHeader.vue';
 import TheGenerator from './components/TheGenerator.vue';
 import TheWaveBackground from './components/TheWaveBackground.vue';
 import TheSquircleExplosion from './components/TheSquircleExplosion.vue';
-import SquircleDemo from '@/assets/img/squircle-demo.svg';
+import SquircleDemo from '@/assets/img/squircle-demo.svg?inline';
 
 export default {
     name: 'App',
@@ -27,24 +27,33 @@ export default {
             <div class="app__content-grid">
                 <SquircleDemo class="squircle-demo" />
                 <div class="app__content-text">
+                    <div class="squiggle"></div>
+                    <p class="longform-paragraph">Hey there 👋</p>
                     <p class="longform-paragraph">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Quod maxime quam sequi, corrupti quibusdam velit
-                        dolore nobis ex! Nihil sunt placeat magni dolorem in
-                        quaerat aspernatur sapiente illum mollitia aut assumenda
-                        corporis inventore deleniti, corrupti sit. Ipsa dicta
-                        tenetur dolores eligendi enim quisquam adipisci magni!
-                        Commodi voluptates neque maiores est!
+                        Looking for some top-tier squircles (square x circle) to
+                        add to your designs? You’ve come to the right place!
+                        Squircley is a curve based generator for creating
+                        beautiful squircles - ready to use for logos, icons,
+                        weird blobby characters and more.
                     </p>
                     <p class="longform-paragraph">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Quod maxime quam sequi, corrupti quibusdam velit
-                        dolore nobis ex! Nihil sunt placeat magni dolorem in
-                        quaerat aspernatur sapiente illum mollitia aut assumenda
-                        corporis inventore deleniti, corrupti sit. Ipsa dicta
-                        tenetur dolores eligendi enim quisquam adipisci magni!
-                        Commodi voluptates neque maiores est!
+                        Squircley exports SVG files which can be copied straight
+                        to the clipboard for dropping into your HTML / CSS or
+                        downloaded to your computer ready to use in your design
+                        software of choice (Figma, Sketch, Framer, etc)
                     </p>
+                    <p class="longform-paragraph">
+                        Wondering WTF a squircle actually is? Check out
+                        <a href="https://youtu.be/z86cx2A4_3E"
+                            >this awesome video
+                        </a>
+                        by Dan Shiffman or
+                        <a href="https://mathworld.wolfram.com/Squircle.html"
+                            >this page</a
+                        >
+                        on Wolfram MathWorld.
+                    </p>
+                    <p class="longform-paragraph">Enjoy! ❤️</p>
                 </div>
             </div>
         </div>
@@ -100,7 +109,7 @@ export default {
 }
 
 .longform-paragraph {
-    font-size: var(--font-size-3);
+    font-size: var(--font-size-4);
     line-height: 1.75;
     margin-bottom: var(--spacing-5);
 }
@@ -109,6 +118,17 @@ export default {
     justify-self: end;
     grid-column: 9 / 13;
     grid-row: 1;
+    margin-top: var(--spacing-7);
+}
+
+.squiggle {
+    width: var(--spacing-9);
+    height: 8px;
+    background-image: url('./assets/img/wiggle.svg');
+    background-size: 58px auto;
+    background-position: center center;
+    background-repeat: repeat-x;
+    margin-bottom: var(--spacing-7);
 }
 
 @media only screen and (max-width: 68rem) {
@@ -130,10 +150,15 @@ export default {
     }
 
     .squircle-demo {
-        width: 128px;
-        height: 128px;
+        width: 120px;
+        height: 120px;
         float: right;
         margin-left: var(--spacing-4);
+        margin-top: var(--spacing-9);
+    }
+
+    .longform-paragraph {
+        font-size: var(--font-size-3);
     }
 }
 </style>

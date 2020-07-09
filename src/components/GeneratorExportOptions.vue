@@ -1,6 +1,6 @@
 <script>
-import DownloadIcon from '@/assets/img/download-cloud.svg';
-import ClipBoardIcon from '@/assets/img/clipboard.svg';
+import DownloadIcon from '@/assets/img/download-cloud.svg?inline';
+import ClipBoardIcon from '@/assets/img/clipboard.svg?inline';
 
 import { saveAs } from 'file-saver';
 import copy from 'copy-to-clipboard';
@@ -39,6 +39,7 @@ export default {
             class="generator-export-controls__btn"
             @click="downloadSVG"
         >
+            Save
             <DownloadIcon />
         </button>
         <button
@@ -46,6 +47,7 @@ export default {
             class="generator-export-controls__btn"
             @click="copySVGToClipBoard"
         >
+            Copy
             <ClipBoardIcon />
         </button>
     </div>
@@ -54,44 +56,49 @@ export default {
 <style scoped>
 .generator-export-controls {
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
     width: 100%;
 }
 
 .generator-export-controls__btn {
-    align-self: flex-end;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: var(--spacing-6);
+    padding: 0 var(--spacing-3);
+    width: 50%;
     height: var(--spacing-6);
     margin-left: var(--spacing-4);
-    padding: 0;
-    border: 1px solid var(--grey-100);
-    border-radius: 50%;
     outline: none;
     cursor: pointer;
-    background: #fff;
-    transition: stroke 125ms ease-in-out, transform 125ms ease-in-out;
+    background: var(--grey-900);
+    border-radius: 32px;
+    color: #fff;
+    border: 2px solid var(--grey-900);
 }
 
 .generator-export-controls__btn svg {
     width: 24px;
     height: 24px;
-    stroke: var(--grey-900);
-    stroke-width: 2px;
+    stroke: var(--grey-000);
+    stroke-width: 1.5px;
+    margin-left: var(--spacing-3);
+    transition: stroke 125ms ease-in-out, transform 125ms ease-in-out;
 }
 
 .generator-export-controls__btn:hover {
-    transform: scale(1.125);
+    background: #fff;
+    color: var(--grey-900);
+    font-weight: 700;
 }
 
-.generator-export-controls__btn:active {
-    transform: scale(0.875);
+.generator-export-controls__btn:hover svg {
+    transform: scale(1.125);
+    stroke: var(--grey-900);
 }
 
 .generator-export-controls__btn:active svg {
-    stroke: var(--grey-500);
+    transform: scale(0.875);
 }
 
 .generator-export-controls__btn:first-child {
