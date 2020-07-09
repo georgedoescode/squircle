@@ -12,7 +12,7 @@ export default {
         return {
             squircleOpts: {
                 curvature: 0.5,
-                scale: 100,
+                scale: '100',
                 fill: '#1f2933',
             },
             path: '',
@@ -52,7 +52,11 @@ export default {
 
 <template>
     <div class="generator">
-        <GeneratorPreview :path="path" :fill="squircleOpts.fill" />
+        <GeneratorPreview
+            :path="path"
+            :fill="squircleOpts.fill"
+            :scale="squircleOpts.scale"
+        />
         <GeneratorControls
             :initial-fill="squircleOpts.fill"
             @controls-changed="handleControlChange"

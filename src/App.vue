@@ -42,17 +42,6 @@ export default {
                         downloaded to your computer ready to use in your design
                         software of choice (Figma, Sketch, Framer, etc)
                     </p>
-                    <p class="longform-paragraph">
-                        Wondering WTF a squircle actually is? Check out
-                        <a href="https://youtu.be/z86cx2A4_3E"
-                            >this awesome video
-                        </a>
-                        by Dan Shiffman or
-                        <a href="https://mathworld.wolfram.com/Squircle.html"
-                            >this page</a
-                        >
-                        on Wolfram MathWorld.
-                    </p>
                     <p class="longform-paragraph">Enjoy! ❤️</p>
                 </div>
             </div>

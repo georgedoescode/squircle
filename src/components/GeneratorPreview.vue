@@ -10,6 +10,10 @@ export default {
             type: String,
             required: true,
         },
+        scale: {
+            type: String,
+            required: true,
+        },
     },
 };
 </script>
@@ -23,7 +27,12 @@ export default {
             version="1.1"
             :fill="fill"
         >
-            <path :d="path" />
+            <path
+                :d="path"
+                :transform="`translate(${(200 - scale) / 2} ${
+                    (200 - scale) / 2
+                })`"
+            />
         </svg>
     </div>
 </template>
