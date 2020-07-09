@@ -163,11 +163,13 @@ export default {
 }
 
 .generator-conrols__swatch-text {
+    position: relative;
     border: 0;
-    background: transparent;
-    outline: none;
     width: 100%;
     text-transform: uppercase;
+    height: 100%;
+    background: var(--grey-000);
+    outline: none;
 }
 
 .generator-controls__detail {

@@ -57,22 +57,25 @@ input[type='range'] {
     -webkit-appearance: none;
     width: 100%;
     background: transparent;
+    outline: none;
 
-    --thumb-width: 16px;
+    --thumb-width: 12px;
     --thumb-height: 32px;
     --thumb-radius: 16px;
     --thumb-bg: var(--grey-900);
+    --thumb-scale: 1;
     --track-height: 4px;
     --track-radius: 2px;
     --track-bg: var(--grey-000);
 }
 
-input[type='range']:focus {
-    outline: none;
-}
-
 input[type='range']:hover {
     --track-bg: var(--grey-100);
+    --thumb-scale: 1.125;
+}
+
+input[type='range']:active {
+    --thumb-scale: 0.875;
 }
 
 input[type='range']::-webkit-slider-thumb {
@@ -83,6 +86,8 @@ input[type='range']::-webkit-slider-thumb {
     border-radius: var(--thumb-radius);
     background: var(--thumb-bg);
     cursor: pointer;
+    transition: transform 125ms ease-in-out;
+    transform: scale(var(--thumb-scale));
 }
 
 input[type='range']::-moz-range-thumb {
@@ -93,6 +98,8 @@ input[type='range']::-moz-range-thumb {
     border-radius: var(--thumb-radius);
     background: var(--thumb-bg);
     cursor: pointer;
+    transition: transform 125ms ease-in-out;
+    transform: scale(var(--thumb-scale));
 }
 
 input[type='range']::-webkit-slider-runnable-track {
@@ -102,6 +109,7 @@ input[type='range']::-webkit-slider-runnable-track {
     cursor: pointer;
     background: var(--track-bg);
     border-radius: var(--track-radius);
+    transition: background-color 125ms ease-in-out;
 }
 
 input[type='range']::-moz-range-track {
@@ -111,5 +119,6 @@ input[type='range']::-moz-range-track {
     cursor: pointer;
     background: var(--track-bg);
     border-radius: var(--track-radius);
+    transition: background-color 125ms ease-in-out;
 }
 </style>

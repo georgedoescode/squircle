@@ -73,7 +73,7 @@ export default {
     padding: var(--spacing-5);
     background: #fff;
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.075);
-    border-radius: 32px;
+    border-radius: 48px;
 }
 
 @media screen and (max-width: 56rem) {

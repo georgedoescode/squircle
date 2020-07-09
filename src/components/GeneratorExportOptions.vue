@@ -39,7 +39,9 @@ export default {
             class="generator-export-controls__btn"
             @click="downloadSVG"
         >
-            Save
+            <span>
+                Save
+            </span>
             <DownloadIcon />
         </button>
         <button
@@ -65,36 +67,34 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    outline: none;
     padding: 0 var(--spacing-3);
     width: 50%;
     height: var(--spacing-6);
     margin-left: var(--spacing-4);
-    outline: none;
     cursor: pointer;
-    background: var(--grey-900);
-    border-radius: 32px;
-    color: #fff;
-    border: 2px solid var(--grey-900);
+    background: #fff;
+    border-radius: 12px;
+    font-weight: 700;
+    border: 2px solid var(--grey-100);
+    color: var(--grey-900);
+    transition: background-color 125ms ease-in-out;
 }
 
 .generator-export-controls__btn svg {
     width: 24px;
     height: 24px;
-    stroke: var(--grey-000);
     stroke-width: 1.5px;
     margin-left: var(--spacing-3);
+    stroke: var(--grey-900);
     transition: stroke 125ms ease-in-out, transform 125ms ease-in-out;
 }
 
 .generator-export-controls__btn:hover {
-    background: #fff;
     color: var(--grey-900);
     font-weight: 700;
-}
-
-.generator-export-controls__btn:hover svg {
-    transform: scale(1.125);
-    stroke: var(--grey-900);
+    border-color: var(--grey-100);
+    background: var(--grey-000);
 }
 
 .generator-export-controls__btn:active svg {

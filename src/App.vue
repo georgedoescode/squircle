@@ -28,21 +28,20 @@ export default {
                 <SquircleDemo class="squircle-demo" />
                 <div class="app__content-text">
                     <div class="squiggle"></div>
-                    <p class="longform-paragraph">Hey there 👋</p>
+
                     <p class="longform-paragraph">
-                        Looking for some top-tier squircles (square x circle) to
-                        add to your designs? You’ve come to the right place!
-                        Squircley is a curve based generator for creating
-                        beautiful squircles - ready to use for logos, icons,
-                        weird blobby characters and more.
+                        Looking to add some premium squircley goodness to add to
+                        your designs? Squircley is all you need to start
+                        creating beautiful organic shapes ready to use for
+                        logos, icons and background images.
                     </p>
                     <p class="longform-paragraph">
-                        Squircley exports SVG files which can be copied straight
-                        to the clipboard for dropping into your HTML / CSS or
-                        downloaded to your computer ready to use in your design
-                        software of choice (Figma, Sketch, Framer, etc)
+                        The generator exports SVG files which can be copied
+                        straight to the clipboard for dropping into your HTML /
+                        CSS or downloaded to your computer ready to use in your
+                        design software of choice (Figma, Sketch, Framer, etc)
                     </p>
-                    <p class="longform-paragraph">Enjoy! ❤️</p>
+                    <p class="longform-paragraph">Have fun! 🎨</p>
                 </div>
             </div>
         </div>
@@ -107,7 +106,7 @@ export default {
     justify-self: end;
     grid-column: 9 / 13;
     grid-row: 1;
-    margin-top: var(--spacing-7);
+    margin-top: 0;
 }
 
 .squiggle {
@@ -117,7 +116,7 @@ export default {
     background-size: 58px auto;
     background-position: center center;
     background-repeat: repeat-x;
-    margin-bottom: var(--spacing-7);
+    margin-bottom: var(--spacing-8);
 }
 
 @media only screen and (max-width: 68rem) {
