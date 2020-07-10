@@ -171,6 +171,7 @@ export default {
     background: transparent;
     border: 2px solid var(--grey-000);
     border-radius: 12px 0 0 12px;
+    box-shadow: none;
     transition: border 125ms ease-in-out;
 }
 
