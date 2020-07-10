@@ -7,6 +7,7 @@ const StylelintPlugin = require('stylelint-webpack-plugin');
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = (env, argv) => {
     const MODE = argv.mode;
@@ -131,6 +132,9 @@ module.exports = (env, argv) => {
                         yandex: false,
                     },
                 },
+            }),
+            new CopyPlugin({
+                patterns: [{ from: './public/og-image.png', to: 'dist/' }],
             }),
             new CleanWebpackPlugin(),
         ],
