@@ -61,7 +61,7 @@ input[type='range'] {
     --thumb-width: 16px;
     --thumb-height: 32px;
     --thumb-radius: 16px;
-    --thumb-bg: var(--grey-900);
+    --thumb-bg: #4d3df7;
     --thumb-scale: 1;
     --track-height: 4px;
     --track-radius: 2px;
@@ -69,7 +69,6 @@ input[type='range'] {
 }
 
 input[type='range']:hover {
-    --track-bg: var(--grey-100);
     --thumb-scale: 1.125;
 }
 

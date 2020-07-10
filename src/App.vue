@@ -33,6 +33,7 @@ export default {
         <TheSquircleExplosion />
         <div class="app__content">
             <TheGenerator />
+
             <TheInfoSection />
         </div>
     </div>

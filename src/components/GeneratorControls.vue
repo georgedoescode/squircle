@@ -97,6 +97,24 @@ export default {
                 />
                 <VSwatches
                     v-model="fill"
+                    :swatches="[
+                        '#199473',
+                        '#65D6AD',
+                        '#C6F7E2',
+                        '#EFFCF6',
+                        '#035388',
+                        '#1992D4',
+                        '#5ED0FA',
+                        '#E3F8FF',
+                        '#8A041A',
+                        '#E12D39',
+                        '#F86A6A',
+                        '#FFE3E3',
+                        '#DE911D',
+                        '#F0B429',
+                        '#FADB5F',
+                        '#FFF3C4',
+                    ]"
                     :trigger-style="{
                         width: '64px',
                         height: '48px',
@@ -165,6 +183,7 @@ export default {
 .generator-conrols__swatch-text {
     position: relative;
     width: 100%;
+    min-width: 0;
     text-transform: uppercase;
     height: 100%;
     padding-left: var(--spacing-3);
@@ -175,7 +194,7 @@ export default {
     transition: border 125ms ease-in-out;
 }
 
-.generator-conrols__swatch-text:hover {
+.generator-controls__swatch:hover .generator-conrols__swatch-text {
     border: 2px solid var(--grey-100);
     border-right: 0;
 }
@@ -229,7 +248,7 @@ hr {
     transition: transform 125ms ease-in-out;
 }
 
-.vue-swatches__trigger__wrapper:hover {
+.generator-controls__swatch:hover .vue-swatches__trigger__wrapper {
     transform: scaleX(1.125);
 }
 </style>

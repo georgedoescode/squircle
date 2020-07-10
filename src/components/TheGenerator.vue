@@ -13,7 +13,7 @@ export default {
             squircleOpts: {
                 curvature: 0.5,
                 scale: '100',
-                fill: '#1f2933',
+                fill: '#FADB5F',
             },
             path: '',
         };
@@ -72,7 +72,7 @@ export default {
     grid-gap: var(--spacing-6);
     padding: var(--spacing-5);
     background: #fff;
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.075);
+    box-shadow: 0 24px 32px rgba(16, 42, 67, 0.075);
     border-radius: 48px;
 }
 

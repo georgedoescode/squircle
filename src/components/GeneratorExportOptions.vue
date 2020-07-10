@@ -49,7 +49,9 @@ export default {
             class="generator-export-controls__btn"
             @click="copySVGToClipBoard"
         >
-            Copy
+            <span>
+                Copy
+            </span>
             <ClipBoardIcon />
         </button>
     </div>
@@ -75,9 +77,13 @@ export default {
     background: #fff;
     border-radius: 12px;
     font-weight: 700;
-    border: 2px solid var(--grey-100);
-    color: var(--grey-900);
-    transition: background-color 125ms ease-in-out;
+    border: 2px solid #4d3df7;
+    color: #4d3df7;
+    transition: transform 125ms ease-in-out;
+}
+
+.generator-export-controls__btn span {
+    transition: transform 125ms ease-in-out;
 }
 
 .generator-export-controls__btn svg {
@@ -85,15 +91,12 @@ export default {
     height: 24px;
     stroke-width: 1.5px;
     margin-left: var(--spacing-2);
-    stroke: var(--grey-900);
+    stroke: #4d3df7;
     transition: stroke 125ms ease-in-out, transform 125ms ease-in-out;
 }
 
-.generator-export-controls__btn:hover {
-    color: var(--grey-900);
-    font-weight: 700;
-    border-color: var(--grey-100);
-    background: var(--grey-000);
+.generator-export-controls__btn:hover svg {
+    transform: scale(1.125);
 }
 
 .generator-export-controls__btn:active svg {
@@ -102,5 +105,12 @@ export default {
 
 .generator-export-controls__btn:first-child {
     margin-left: 0;
+    background: #4d3df7;
+    color: #e6e6ff;
+    border: 0;
+}
+
+.generator-export-controls__btn:first-child svg {
+    stroke: #e6e6ff;
 }
 </style>

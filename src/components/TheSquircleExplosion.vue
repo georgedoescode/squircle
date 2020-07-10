@@ -33,7 +33,8 @@ export default {
     position: absolute;
     width: 64px;
     height: 64px;
-    fill: var(--grey-100);
+    fill: #7069fa;
+    opacity: 0.75;
 }
 
 .squircle-explosion__squircle:nth-of-type(1) {
@@ -46,6 +47,7 @@ export default {
     top: var(--spacing-11);
     right: var(--spacing-5);
     transform: rotate(32deg);
+    fill: #f86a6a;
 }
 
 .squircle-explosion__squircle:nth-of-type(3) {
@@ -54,6 +56,7 @@ export default {
     top: var(--spacing-13);
     left: var(--spacing-9);
     transform: rotate(54deg);
+    fill: #fadb5f;
 }
 
 .squircle-explosion__squircle:nth-of-type(4) {
@@ -62,6 +65,7 @@ export default {
     top: var(--spacing-13);
     right: var(--spacing-8);
     transform: rotate(128deg);
+    fill: #fadb5f;
 }
 
 .squircle-explosion__squircle:nth-of-type(5) {
@@ -70,6 +74,7 @@ export default {
     top: var(--spacing-8);
     right: var(--spacing-12);
     transform: rotate(128deg);
+    fill: #7069fa;
 }
 
 @media only screen and (max-width: 72rem) {

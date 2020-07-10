@@ -42,7 +42,7 @@ export default {
 .header__logo svg {
     width: 100%;
     height: 100%;
-    fill: var(--grey-900);
+    fill: #4d3df7;
 }
 
 .header__title {

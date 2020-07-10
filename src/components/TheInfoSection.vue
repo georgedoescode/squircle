@@ -56,6 +56,7 @@ export default {
     grid-column: 9 / 13;
     grid-row: 1;
     margin-top: 0;
+    width: 100%;
 }
 
 .info-section__squiggle {
@@ -92,6 +93,10 @@ export default {
 
     .info-section__paragraph {
         font-size: var(--font-size-3);
+    }
+
+    .info-section__squiggle {
+        margin-bottom: var(--spacing-6);
     }
 }
 </style>

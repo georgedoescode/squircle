@@ -55,6 +55,10 @@ button {
     background-color: transparent;
 }
 
+button > * {
+    pointer-events: none;
+}
+
 embed,
 iframe,
 img,
@@ -107,16 +111,16 @@ table {
     --spacing-15: 48rem;
 
     /* Colors - Grey */
-    --grey-900: #1f2933;
-    --grey-800: #323f4b;
-    --grey-700: #3e4c59;
-    --grey-600: #52606d;
-    --grey-500: #616e7c;
-    --grey-400: #7b8794;
-    --grey-300: #9aa5b1;
-    --grey-200: #cbd2d9;
-    --grey-100: #e4e7eb;
-    --grey-000: #f5f7fa;
+    --grey-900: #102a43;
+    --grey-800: #243b53;
+    --grey-700: #334e68;
+    --grey-600: #486581;
+    --grey-500: #627d98;
+    --grey-400: #829ab1;
+    --grey-300: #9fb3c8;
+    --grey-200: #bcccdc;
+    --grey-100: #d9e2ec;
+    --grey-000: #f0f4f8;
 }
 
 /* Global Styles */
@@ -131,9 +135,9 @@ body:not(.user-is-tabbing) textarea:focus {
 body {
     font-family: var(--font-family);
     line-height: 1;
-    color: var(--grey-900);
+    color: #0c008c;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smothing: grayscale;
+    -moz-osx-font-smoothing: grayscale;
     background: var(--grey-000);
     overflow-x: hidden;
 }

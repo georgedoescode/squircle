@@ -56,7 +56,7 @@ export default {
 .social-sharing__icon svg {
     width: 100%;
     height: 100%;
-    fill: var(--grey-900);
+    fill: #0c008c;
     transition: fill 125ms ease-in-out, transform 125ms ease-in-out;
 }
 
