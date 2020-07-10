@@ -98,22 +98,22 @@ export default {
                 <VSwatches
                     v-model="fill"
                     :swatches="[
-                        '#199473',
-                        '#65D6AD',
-                        '#C6F7E2',
-                        '#EFFCF6',
-                        '#035388',
-                        '#1992D4',
-                        '#5ED0FA',
-                        '#E3F8FF',
-                        '#8A041A',
-                        '#E12D39',
-                        '#F86A6A',
-                        '#FFE3E3',
-                        '#DE911D',
-                        '#F0B429',
+                        '#EF4E4E',
+                        '#F9703E',
                         '#FADB5F',
-                        '#FFF3C4',
+                        '#6CD410',
+                        '#31B237',
+                        '#2DCCA7',
+                        '#1CD4D4',
+                        '#40C3F7',
+                        '#2186EB',
+                        '#3A66DB',
+                        '#9446ED',
+                        '#ED47ED',
+                        '#E8368F',
+                        '#829AB1',
+                        '#7B8794',
+                        '#F5F7FA',
                     ]"
                     :trigger-style="{
                         width: '64px',
@@ -250,5 +250,11 @@ hr {
 
 .generator-controls__swatch:hover .vue-swatches__trigger__wrapper {
     transform: scaleX(1.125);
+}
+
+.vue-swatches__container {
+    box-shadow: 0 24px 32px rgba(16, 42, 67, 0.075) !important;
+    border: 2px solid var(--grey-100);
+    border-radius: 24px !important;
 }
 </style>

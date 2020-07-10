@@ -26,6 +26,7 @@ export default {
             this.$toasted.show('Squircle SVG copied to clipboard!', {
                 position: 'bottom-center',
                 duration: 2500,
+                className: 'toast',
             });
         },
     },
@@ -112,5 +113,11 @@ export default {
 
 .generator-export-controls__btn:first-child svg {
     stroke: #e6e6ff;
+}
+</style>
+
+<style>
+.toast {
+    background: var(--grey-900) !important;
 }
 </style>
