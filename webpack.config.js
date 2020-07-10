@@ -6,6 +6,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = (env, argv) => {
     const MODE = argv.mode;
@@ -113,6 +114,24 @@ module.exports = (env, argv) => {
             }),
             new MiniCssExtractPlugin(),
             new StylelintPlugin({ files: ['src/**/*.{vue,scss,css}'] }),
+            new FaviconsWebpackPlugin({
+                logo: './src/assets/img/squircley-logo.svg',
+                mode: 'webapp',
+                devMode: 'webapp',
+                favicons: {
+                    appName: 'Squircley',
+                    appDescription:
+                        'Create and export beautiful SVG squircles to use in your designs',
+                    developerName: 'George Francis',
+                    developerURL: null,
+                    background: '#fff',
+                    theme_color: '#333',
+                    icons: {
+                        coast: false,
+                        yandex: false,
+                    },
+                },
+            }),
             new CleanWebpackPlugin(),
         ],
     };

@@ -24,6 +24,7 @@
         "eslint-loader": "^4.0.2",
         "eslint-plugin-prettier": "^3.1.4",
         "eslint-plugin-vue": "^7.0.0-alpha.8",
+        "favicons-webpack-plugin": "^3.0.1",
         "file-loader": "^6.0.0",
         "html-webpack-plugin": "^4.3.0",
         "mini-css-extract-plugin": "^0.9.0",
