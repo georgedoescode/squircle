@@ -81,6 +81,7 @@ input[type='range']::-webkit-slider-thumb {
     height: var(--thumb-height);
     width: var(--thumb-width);
     margin-top: -14px;
+    border: 0;
     border-radius: var(--thumb-radius);
     background: var(--thumb-bg);
     cursor: pointer;

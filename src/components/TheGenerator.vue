@@ -83,6 +83,7 @@ export default {
 
     .generator {
         grid-template-columns: 1fr;
+        grid-gap: var(--spacing-5);
         padding: 0;
         background: none;
         box-shadow: none;

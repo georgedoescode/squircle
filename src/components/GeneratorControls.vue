@@ -181,6 +181,7 @@ export default {
 }
 
 .generator-conrols__swatch-text {
+    -webkit-appearance: none;
     position: relative;
     width: 100%;
     min-width: 0;
