@@ -31,7 +31,10 @@ export default {
         <div class="app__footer">
             <p class="info-section__paragraph">
                 Made by
-                <a href="https://github.com/georgedoescode" target="_blank"
+                <a
+                    href="https://github.com/georgedoescode"
+                    target="_blank"
+                    rel="noopener"
                     >georgedoescode</a
                 >
             </p>
