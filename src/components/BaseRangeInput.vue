@@ -57,7 +57,6 @@ input[type='range'] {
     -webkit-appearance: none;
     width: 100%;
     background: transparent;
-    outline: none;
 
     --thumb-width: 16px;
     --thumb-height: 32px;

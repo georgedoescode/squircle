@@ -67,7 +67,6 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    outline: none;
     padding: 0 var(--spacing-3);
     width: 50%;
     height: var(--spacing-6);

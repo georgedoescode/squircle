@@ -157,7 +157,6 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: var(--spacing-3);
     height: var(--spacing-6);
     background: var(--grey-000);
     border-radius: 12px;
@@ -165,12 +164,19 @@ export default {
 
 .generator-conrols__swatch-text {
     position: relative;
-    border: 0;
     width: 100%;
     text-transform: uppercase;
     height: 100%;
-    background: var(--grey-000);
-    outline: none;
+    padding-left: var(--spacing-3);
+    background: transparent;
+    border: 2px solid var(--grey-000);
+    border-radius: 12px 0 0 12px;
+    transition: border 125ms ease-in-out;
+}
+
+.generator-conrols__swatch-text:hover {
+    border: 2px solid var(--grey-100);
+    border-right: 0;
 }
 
 .generator-controls__detail {
@@ -212,5 +218,17 @@ hr {
     .generator-controls__label--export {
         display: none;
     }
+}
+</style>
+
+<style>
+.vue-swatches__trigger__wrapper {
+    display: block;
+    transform-origin: 100% 100%;
+    transition: transform 125ms ease-in-out;
+}
+
+.vue-swatches__trigger__wrapper:hover {
+    transform: scaleX(1.125);
 }
 </style>
