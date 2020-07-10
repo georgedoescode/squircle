@@ -80,7 +80,7 @@ export default {
                 class="generator-controls__slider"
                 :min="0"
                 :max="1"
-                :value="0.75"
+                :value="0.5"
                 :step="0.01"
                 @change="handleControlChange"
             />
@@ -203,6 +203,14 @@ hr {
     .generator-controls__label {
         font-size: var(--font-size-3);
         margin-right: var(--spacing-5);
+    }
+
+    .generator-export-controls {
+        grid-column: -1 / 1;
+    }
+
+    .generator-controls__label--export {
+        display: none;
     }
 }
 </style>

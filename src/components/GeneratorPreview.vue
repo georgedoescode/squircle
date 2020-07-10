@@ -29,9 +29,10 @@ export default {
         >
             <path
                 :d="path"
-                :transform="`translate(${(200 - scale) / 2} ${
-                    (200 - scale) / 2
-                })`"
+                :transform="`translate(
+                    ${(200 - scale) / 2} 
+                    ${(200 - scale) / 2}
+                )`"
             />
         </svg>
     </div>

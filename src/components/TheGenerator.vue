@@ -11,7 +11,7 @@ export default {
     data() {
         return {
             squircleOpts: {
-                curvature: 0.75,
+                curvature: 0.5,
                 scale: '100',
                 fill: '#1f2933',
             },

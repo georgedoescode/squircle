@@ -85,7 +85,7 @@ export default {
     width: 24px;
     height: 24px;
     stroke-width: 1.5px;
-    margin-left: var(--spacing-3);
+    margin-left: var(--spacing-2);
     stroke: var(--grey-900);
     transition: stroke 125ms ease-in-out, transform 125ms ease-in-out;
 }
