@@ -134,7 +134,7 @@ module.exports = (env, argv) => {
                 },
             }),
             new CopyPlugin({
-                patterns: [{ from: './public/og-image.png', to: 'dist/' }],
+                patterns: [{ from: './public/og-image.png', to: '' }],
             }),
             new CleanWebpackPlugin(),
         ],
