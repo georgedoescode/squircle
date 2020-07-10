@@ -7,6 +7,7 @@ const StylelintPlugin = require('stylelint-webpack-plugin');
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const RobotstxtPlugin = require('robotstxt-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = (env, argv) => {
@@ -136,6 +137,7 @@ module.exports = (env, argv) => {
             new CopyPlugin({
                 patterns: [{ from: './public/og-image.png', to: '' }],
             }),
+            new RobotstxtPlugin({}),
             new CleanWebpackPlugin(),
         ],
     };
