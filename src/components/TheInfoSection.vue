@@ -28,6 +28,14 @@ export default {
             </p>
             <p class="info-section__paragraph">Have fun! 🎨</p>
         </div>
+        <div class="app__footer">
+            <p class="info-section__paragraph">
+                Made by
+                <a href="https://github.com/georgedoescode" target="_blank"
+                    >georgedoescode</a
+                >
+            </p>
+        </div>
     </div>
 </template>
 
@@ -67,6 +75,16 @@ export default {
     background-position: center center;
     background-repeat: repeat-x;
     margin-bottom: var(--spacing-8);
+}
+
+.app__footer {
+    width: 100%;
+    grid-column: 2 / 6;
+    margin-top: var(--spacing-7);
+}
+
+.app__footer a {
+    color: #4d3df7;
 }
 
 @media only screen and (max-width: 68rem) {
