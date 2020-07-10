@@ -115,7 +115,7 @@ module.exports = (env, argv) => {
             new MiniCssExtractPlugin(),
             new StylelintPlugin({ files: ['src/**/*.{vue,scss,css}'] }),
             new FaviconsWebpackPlugin({
-                logo: './src/assets/img/squircley-logo.svg',
+                logo: './src/assets/img/favicon.svg',
                 mode: 'webapp',
                 devMode: 'webapp',
                 favicons: {
