@@ -137,7 +137,9 @@ module.exports = (env, argv) => {
             new CopyPlugin({
                 patterns: [{ from: './public/og-image.png', to: '' }],
             }),
-            new RobotstxtPlugin({}),
+            new RobotstxtPlugin({
+                sitemap: 'https://squircley.app/sitemap.xml',
+            }),
             new CleanWebpackPlugin(),
         ],
     };
