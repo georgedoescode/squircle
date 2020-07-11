@@ -38,6 +38,17 @@ export default {
                     >georgedoescode</a
                 >
             </p>
+            <a
+                class="product-hunt-badge"
+                href="https://www.producthunt.com/posts/squircley?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-squircley"
+                target="_blank"
+                ><img
+                    src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=215104&theme=light"
+                    alt="Squircley - All you need to start creating beautiful squircles! | Product Hunt Embed"
+                    style="width: 250px; height: 54px;"
+                    width="250px"
+                    height="54px"
+            /></a>
         </div>
     </div>
 </template>
@@ -88,6 +99,11 @@ export default {
 
 .app__footer a {
     color: #4d3df7;
+}
+
+.product-hunt-badge {
+    display: block;
+    margin-top: var(--spacing-7);
 }
 
 @media only screen and (max-width: 68rem) {
