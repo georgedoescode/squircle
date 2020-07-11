@@ -13,21 +13,44 @@ export default {
     },
     methods: {
         downloadSVG() {
-            const content = document.querySelector('#squircleSVG').outerHTML;
-            const blob = new Blob([content], {
+            const exportSVG = this.createSVG(
+                document.querySelector('#squircleSVG path')
+            );
+            const blob = new Blob([exportSVG], {
                 type: 'text/plain;charset=utf-8',
             });
 
             saveAs(blob, 'squircle.svg');
         },
         copySVGToClipBoard() {
-            const content = document.querySelector('#squircleSVG').outerHTML;
-            copy(content);
+            const exportSVG = this.createSVG(
+                document.querySelector('#squircleSVG path')
+            );
+
+            copy(exportSVG);
+
             this.$toasted.show('Squircle SVG copied to clipboard!', {
                 position: 'bottom-center',
                 duration: 2500,
                 className: 'toast',
             });
+        },
+        createSVG(originalPath) {
+            const svg = document.createElement('svg');
+            const path = document.createElement('path');
+
+            svg.appendChild(path);
+
+            svg.setAttribute('viewBox', '0 0 200 200');
+            svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+
+            const pathD = originalPath.getAttribute('d');
+            const pathFill = originalPath.getAttribute('fill');
+
+            path.setAttribute('d', pathD);
+            path.setAttribute('fill', pathFill);
+
+            return svg.outerHTML;
         },
     },
 };

@@ -123,14 +123,14 @@ table {
     --grey-000: #f0f4f8;
 }
 
-/* Global Styles */
-
 body:not(.user-is-tabbing) button:focus,
 body:not(.user-is-tabbing) input:focus,
 body:not(.user-is-tabbing) select:focus,
 body:not(.user-is-tabbing) textarea:focus {
     outline: none;
 }
+
+/* Global Styles */
 
 body {
     font-family: var(--font-family);

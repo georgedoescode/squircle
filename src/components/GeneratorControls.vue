@@ -14,6 +14,14 @@ export default {
             type: String,
             required: true,
         },
+        scale: {
+            type: Number,
+            required: true,
+        },
+        curvature: {
+            type: Number,
+            required: true,
+        },
     },
     data() {
         return {
@@ -68,7 +76,7 @@ export default {
                 class="generator-controls__slider"
                 :min="0"
                 :max="200"
-                :value="100"
+                :value="scale"
                 :step="1"
                 @change="handleControlChange"
             />
@@ -80,7 +88,7 @@ export default {
                 class="generator-controls__slider"
                 :min="0"
                 :max="1"
-                :value="0.5"
+                :value="curvature"
                 :step="0.01"
                 @change="handleControlChange"
             />
@@ -123,11 +131,11 @@ export default {
                 />
             </div>
             <hr />
-            <label
-                for=""
+            <p
                 class="generator-controls__label generator-controls__label--export"
-                >Export</label
             >
+                Export
+            </p>
             <GeneratorExportOptions />
         </div>
     </div>

@@ -11,7 +11,7 @@ export default {
             required: true,
         },
         scale: {
-            type: String,
+            type: Number,
             required: true,
         },
     },
@@ -25,7 +25,6 @@ export default {
             viewBox="0 0 200 200"
             xmlns="http://www.w3.org/2000/svg"
             version="1.1"
-            :fill="fill"
         >
             <path
                 :d="path"
@@ -33,6 +32,7 @@ export default {
                     ${(200 - scale) / 2} 
                     ${(200 - scale) / 2}
                 )`"
+                :fill="fill"
             />
         </svg>
     </div>

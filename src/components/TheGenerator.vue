@@ -11,8 +11,8 @@ export default {
     data() {
         return {
             squircleOpts: {
-                curvature: 0.5,
-                scale: '100',
+                curvature: 0.75,
+                scale: 150,
                 fill: '#FADB5F',
             },
             path: '',
@@ -27,19 +27,21 @@ export default {
     },
     methods: {
         setPath(w = 100, h = 100, curvature = 0.5) {
-            const shiftW = (w / 2) * (1 - curvature);
-            const shiftH = (h / 2) * (1 - curvature);
+            const curveWidth = (w / 2) * (1 - curvature);
+            const curveHeight = (h / 2) * (1 - curvature);
 
             this.path = `
                 M 0, ${h / 2}
-                C 0, ${shiftW} ${shiftH}, 0 ${w / 2}, 0
-                S ${w}, ${shiftH} ${w}, ${h / 2}
-                  ${w - shiftW}, ${h - 0} ${w / 2}, ${h}
-                  0, ${w - shiftH} 0, ${h / 2}
+                C 0, ${curveWidth} ${curveHeight}, 0 ${w / 2}, 0
+                S ${w}, ${curveHeight} ${w}, ${h / 2}
+                    ${w - curveWidth}, ${h - 0} ${w / 2}, ${h}
+                    0, ${w - curveHeight} 0, ${h / 2}
             `;
         },
         handleControlChange({ id, value }) {
+            if (id === 'scale') value = ~~value;
             this.squircleOpts[id] = value;
+
             this.setPath(
                 this.squircleOpts.scale,
                 this.squircleOpts.scale,
@@ -59,6 +61,8 @@ export default {
         />
         <GeneratorControls
             :initial-fill="squircleOpts.fill"
+            :scale="squircleOpts.scale"
+            :curvature="squircleOpts.curvature"
             @controls-changed="handleControlChange"
         />
     </div>
