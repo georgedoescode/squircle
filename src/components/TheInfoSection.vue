@@ -24,7 +24,7 @@ export default {
                 The generator exports SVG files which can be copied straight to
                 the clipboard for dropping into your HTML / CSS or downloaded to
                 your computer ready to use in your design software of choice
-                (Figma, Sketch, Framer, etc)
+                (Figma, Sketch, Framer, XD, etc)
             </p>
             <p class="info-section__paragraph">Have fun! 🎨</p>
         </div>
