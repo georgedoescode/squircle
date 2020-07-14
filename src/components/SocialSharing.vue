@@ -32,7 +32,7 @@ export default {
             class="social-sharing__icon"
             network="twitter"
             v-bind="sharingOptions"
-            hashtags="squircle, design, shapes, icons, logos"
+            hashtags="squircle,design,shapes,icons,logos"
         >
             <TwitterLogo />
         </ShareNetwork>
