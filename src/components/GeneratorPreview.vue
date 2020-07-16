@@ -10,6 +10,10 @@ export default {
             type: String,
             required: true,
         },
+        rotation: {
+            type: Number,
+            required: true,
+        },
         scale: {
             type: Number,
             required: true,
@@ -28,8 +32,12 @@ export default {
         >
             <path
                 :d="path"
-                :transform="`translate(
-                    ${(200 - scale) / 2} 
+                :transform="`rotate(
+                    ${rotation},
+                    100,
+                    100
+                ) translate(
+                    ${(200 - scale) / 2}
                     ${(200 - scale) / 2}
                 )`"
                 :fill="fill"

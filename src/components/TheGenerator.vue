@@ -13,6 +13,7 @@ export default {
             squircleOpts: {
                 curvature: 0.75,
                 scale: 150,
+                rotation: 0,
                 fill: '#FADB5F',
             },
             path: '',
@@ -58,10 +59,12 @@ export default {
             :path="path"
             :fill="squircleOpts.fill"
             :scale="squircleOpts.scale"
+            :rotation="squircleOpts.rotation"
         />
         <GeneratorControls
             :initial-fill="squircleOpts.fill"
             :scale="squircleOpts.scale"
+            :rotation="squircleOpts.rotation"
             :curvature="squircleOpts.curvature"
             @controls-changed="handleControlChange"
         />
