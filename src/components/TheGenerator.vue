@@ -75,7 +75,7 @@ export default {
 .generator {
     position: relative;
     display: grid;
-    grid-template-columns: 368px 1fr;
+    grid-template-columns: 418px 1fr;
     grid-gap: var(--spacing-6);
     padding: var(--spacing-5);
     background: #fff;
@@ -83,7 +83,7 @@ export default {
     border-radius: 48px;
 }
 
-@media screen and (max-width: 56rem) {
+@media screen and (max-width: 60rem) {
     .generator-wrapper {
         width: 100%;
     }

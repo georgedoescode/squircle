@@ -78,8 +78,8 @@ export default {
             <BaseRangeInput
                     name="rotation"
                     class="generator-controls__slider"
-                    :min="0"
-                    :max="90"
+                    :min="-45"
+                    :max="45"
                     :value="rotation"
                     :step="1"
                     @change="handleControlChange"
