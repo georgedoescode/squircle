@@ -83,7 +83,7 @@ export default {
     border-radius: 48px;
 }
 
-@media screen and (max-width: 60rem) {
+@media screen and (max-width: 64rem) {
     .generator-wrapper {
         width: 100%;
     }

@@ -80,7 +80,7 @@ export default {
     height: 100%;
 }
 
-@media only screen and (max-width: 56rem) {
+@media only screen and (max-width: 64rem) {
     .generator-preview {
         max-width: 280px;
         margin-bottom: var(--spacing-3);

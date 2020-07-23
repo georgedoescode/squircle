@@ -76,13 +76,13 @@ export default {
                 Rotation
             </label>
             <BaseRangeInput
-                    name="rotation"
-                    class="generator-controls__slider"
-                    :min="-45"
-                    :max="45"
-                    :value="rotation"
-                    :step="1"
-                    @change="handleControlChange"
+                name="rotation"
+                class="generator-controls__slider"
+                :min="-45"
+                :max="45"
+                :value="rotation"
+                :step="1"
+                @change="handleControlChange"
             />
             <label for="scale" class="generator-controls__label">
                 Scale
@@ -240,7 +240,7 @@ hr {
     margin: var(--spacing-1) 0;
 }
 
-@media only screen and (max-width: 56rem) {
+@media only screen and (max-width: 64rem) {
     .generator-controls {
         padding: 0 var(--spacing-4);
         padding-bottom: var(--spacing-3);
