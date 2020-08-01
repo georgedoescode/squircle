@@ -40,7 +40,8 @@ export default {
             `;
         },
         handleControlChange({ id, value }) {
-            if (id === 'scale') value = ~~value;
+            if (id === 'scale' || id === 'rotation' || id === 'curvature')
+                value = parseFloat(value);
             this.squircleOpts[id] = value;
 
             this.setPath(
@@ -83,7 +84,7 @@ export default {
     border-radius: 48px;
 }
 
-@media screen and (max-width: 64rem) {
+@media screen and (max-width: 62rem) {
     .generator-wrapper {
         width: 100%;
     }

@@ -46,9 +46,11 @@ export default {
 
             const pathD = originalPath.getAttribute('d');
             const pathFill = originalPath.getAttribute('fill');
+            const pathTransform = originalPath.getAttribute('transform');
 
             path.setAttribute('d', pathD);
             path.setAttribute('fill', pathFill);
+            path.setAttribute('transform', pathTransform);
 
             return svg.outerHTML;
         },

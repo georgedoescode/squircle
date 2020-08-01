@@ -60,7 +60,7 @@ export default {
     justify-content: flex-end;
 }
 
-@media only screen and (max-width: 64rem) {
+@media only screen and (max-width: 62rem) {
     .header {
         padding: var(--spacing-4);
         margin-bottom: var(--spacing-4);

@@ -240,7 +240,7 @@ hr {
     margin: var(--spacing-1) 0;
 }
 
-@media only screen and (max-width: 64rem) {
+@media only screen and (max-width: 62rem) {
     .generator-controls {
         padding: 0 var(--spacing-4);
         padding-bottom: var(--spacing-3);

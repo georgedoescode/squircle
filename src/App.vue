@@ -60,7 +60,7 @@ export default {
 }
 
 .generator {
-    max-width: 64rem;
+    max-width: 62rem;
     margin: 0 auto;
     margin-bottom: var(--spacing-8);
 }
@@ -73,7 +73,7 @@ export default {
     height: 540px;
 }
 
-@media only screen and (max-width: 64rem) {
+@media only screen and (max-width: 62rem) {
     .generator {
         margin-bottom: var(--spacing-7);
     }

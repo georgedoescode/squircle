@@ -115,7 +115,7 @@ export default {
     }
 }
 
-@media only screen and (max-width: 64rem) {
+@media only screen and (max-width: 62rem) {
     .info-section {
         display: block;
     }
