@@ -72,7 +72,7 @@ export default {
     transform: scale(0.875);
 }
 
-@media only screen and (max-width: 56rem) {
+@media only screen and (max-width: 62rem) {
     .social-sharing__icon {
         width: var(--spacing-3);
         height: var(--spacing-3);

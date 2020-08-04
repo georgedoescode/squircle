@@ -14,6 +14,10 @@ export default {
             type: String,
             required: true,
         },
+        rotation: {
+            type: Number,
+            required: true,
+        },
         scale: {
             type: Number,
             required: true,
@@ -68,6 +72,18 @@ export default {
 <template>
     <div class="generator-controls">
         <div class="generator-controls__inputs">
+            <label for="rotation" class="generator-controls__label">
+                Rotation
+            </label>
+            <BaseRangeInput
+                name="rotation"
+                class="generator-controls__slider"
+                :min="-45"
+                :max="45"
+                :value="rotation"
+                :step="1"
+                @change="handleControlChange"
+            />
             <label for="scale" class="generator-controls__label">
                 Scale
             </label>
@@ -224,7 +240,7 @@ hr {
     margin: var(--spacing-1) 0;
 }
 
-@media only screen and (max-width: 56rem) {
+@media only screen and (max-width: 62rem) {
     .generator-controls {
         padding: 0 var(--spacing-4);
         padding-bottom: var(--spacing-3);

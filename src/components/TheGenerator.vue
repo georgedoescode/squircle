@@ -13,6 +13,7 @@ export default {
             squircleOpts: {
                 curvature: 0.75,
                 scale: 150,
+                rotation: 0,
                 fill: '#FADB5F',
             },
             path: '',
@@ -39,7 +40,8 @@ export default {
             `;
         },
         handleControlChange({ id, value }) {
-            if (id === 'scale') value = ~~value;
+            if (id === 'scale' || id === 'rotation' || id === 'curvature')
+                value = parseFloat(value);
             this.squircleOpts[id] = value;
 
             this.setPath(
@@ -58,10 +60,12 @@ export default {
             :path="path"
             :fill="squircleOpts.fill"
             :scale="squircleOpts.scale"
+            :rotation="squircleOpts.rotation"
         />
         <GeneratorControls
             :initial-fill="squircleOpts.fill"
             :scale="squircleOpts.scale"
+            :rotation="squircleOpts.rotation"
             :curvature="squircleOpts.curvature"
             @controls-changed="handleControlChange"
         />
@@ -72,7 +76,7 @@ export default {
 .generator {
     position: relative;
     display: grid;
-    grid-template-columns: 368px 1fr;
+    grid-template-columns: 418px 1fr;
     grid-gap: var(--spacing-6);
     padding: var(--spacing-5);
     background: #fff;
@@ -80,7 +84,7 @@ export default {
     border-radius: 48px;
 }
 
-@media screen and (max-width: 56rem) {
+@media screen and (max-width: 62rem) {
     .generator-wrapper {
         width: 100%;
     }
