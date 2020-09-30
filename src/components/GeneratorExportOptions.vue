@@ -13,6 +13,8 @@ export default {
     },
     methods: {
         downloadSVG() {
+            this.refreshAd();
+
             const exportSVG = this.createSVG(
                 document.querySelector('#squircleSVG path')
             );
@@ -23,6 +25,8 @@ export default {
             saveAs(blob, 'squircle.svg');
         },
         copySVGToClipBoard() {
+            this.refreshAd();
+
             const exportSVG = this.createSVG(
                 document.querySelector('#squircleSVG path')
             );
@@ -53,6 +57,12 @@ export default {
             path.setAttribute('transform', pathTransform);
 
             return svg.outerHTML;
+        },
+        refreshAd() {
+            if (!document.querySelectorAll('#carbonads')[0]) return;
+
+            if (typeof window._carbonads !== 'undefined')
+                window._carbonads.refresh();
         },
     },
 };

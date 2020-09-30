@@ -143,9 +143,10 @@ body {
 }
 
 .app {
-    position: relative;
+    /* position: relative; */
 }
 
+/* Ads Stuff */
 .carbon-wrapper {
     min-height: 125px;
     margin-top: var(--spacing-3);
@@ -217,4 +218,19 @@ body {
     font-weight: 600;
     font-size: 9px;
     line-height: 1;
+}
+
+@media only screen and (min-width: 62rem) {
+    .carbon-wrapper {
+        min-height: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    #carbonads {
+        position: fixed;
+        bottom: var(--spacing-3);
+        right: var(--spacing-3);
+        z-index: 100;
+    }
 }
