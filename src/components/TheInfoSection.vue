@@ -94,7 +94,6 @@ export default {
 .app__footer {
     width: 100%;
     grid-column: 2 / 6;
-    margin-top: var(--spacing-7);
 }
 
 .app__footer a {
