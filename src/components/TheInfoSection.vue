@@ -73,10 +73,6 @@ export default {
     margin-bottom: var(--spacing-5);
 }
 
-.info-section__paragraph:last-of-type {
-    margin-bottom: 0;
-}
-
 .info-section__squircle-hero {
     justify-self: end;
     grid-column: 9 / 13;
