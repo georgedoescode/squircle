@@ -32,7 +32,7 @@ export default {
             <p class="info-section__paragraph">
                 Made by
                 <a
-                    href="https://github.com/georgedoescode"
+                    href="https://twitter.com/georgedoescode"
                     target="_blank"
                     rel="noopener"
                     >georgedoescode</a
