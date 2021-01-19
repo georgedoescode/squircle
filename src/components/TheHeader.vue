@@ -77,7 +77,7 @@ export default {
     }
 }
 
-@media only screen and (max-width: 32rem) {
+@media only screen and (max-width: 48rem) {
     .header__social {
         display: none;
     }
