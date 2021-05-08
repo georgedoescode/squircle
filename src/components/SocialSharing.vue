@@ -8,7 +8,7 @@ export default {
     <div class="social-sharing">
         <p>
             Made with ✨ by
-            <a href="https://twitter.com/georgedoescode" target="_blank"
+            <a href="https://georgefrancis.dev/" target="_blank"
                 >George Francis</a
             >
         </p>
