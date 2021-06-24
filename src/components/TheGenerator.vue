@@ -33,10 +33,10 @@ export default {
 
             this.path = `
                 M 0, ${h / 2}
-                C 0, ${curveWidth} ${curveHeight}, 0 ${w / 2}, 0
+                C 0, ${curveHeight} ${curveWidth}, 0 ${w / 2}, 0
                 S ${w}, ${curveHeight} ${w}, ${h / 2}
                     ${w - curveWidth}, ${h - 0} ${w / 2}, ${h}
-                    0, ${w - curveHeight} 0, ${h / 2}
+                    0, ${h - curveHeight} 0, ${h / 2}
             `;
         },
         handleControlChange({ id, value }) {
